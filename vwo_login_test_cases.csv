@@ -1,0 +1,1282 @@
+Test Case ID,Module,Test Case Description,Test Steps,Expected Result,Priority
+TC_001,Authentication System,Verify valid email and password login,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login",User successfully logs in and is redirected to dashboard,High
+TC_002,Authentication System,Verify invalid email and valid password login,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login",Error message 'Invalid credentials' is displayed,High
+TC_003,Authentication System,Verify session timeout after inactivity,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate",User is logged out and redirected to login page,Critical
+TC_004,Authentication System,Verify login via SSO,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow",User successfully logs in via SSO,Critical
+TC_005,Authentication System,Verify MFA prompt after password,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login",MFA verification screen is displayed if enabled,High
+TC_006,User Input Validation,Verify email format validation (missing @),"1. Enter email without @ symbol
+2. Click outside field",Validation error 'Invalid email format' is shown immediately,Critical
+TC_007,User Input Validation,Verify password strength indicator,1. Type weak password in new password field,Strength indicator shows 'Weak',Critical
+TC_008,User Input Validation,Verify auto-focus on email field,1. Open app.vwo.com login page,Email field is focused automatically,Critical
+TC_009,User Input Validation,Verify required fields validation,"1. Leave fields empty
+2. Click Login",Error messages shown for required fields,Critical
+TC_010,Password Management,Verify 'Forgot Password' link navigation,1. Click 'Forgot Password',Navigates to password reset page,Critical
+TC_011,Password Management,Verify password reset token generation,"1. Enter valid email for reset
+2. Submit",Reset link sent to email with secure token,High
+TC_012,Password Management,Verify password complexity requirements,1. Attempt to set password without numbers/specials,Error indicating complexity requirements,High
+TC_013,User Experience (UX),Verify login page load time,1. Open login page,Page loads within 2 seconds,Critical
+TC_014,User Experience (UX),Verify responsive design on mobile viewport,1. Resize window to mobile width,"Layout adjusts correctly, touch targets are appropriate",Critical
+TC_015,User Experience (UX),Verify Light/Dark mode toggle,1. Click theme toggle,UI switches between light and dark themes,High
+TC_016,User Experience (UX),Verify loading state during authentication,1. Enter credentials and click Login,Button shows loading spinner while processing,High
+TC_017,Accessibility,Verify keyboard navigation (Tab key),1. Use Tab key to navigate fields,Focus moves logically across inputs and buttons,Critical
+TC_018,Accessibility,Verify screen reader ARIA labels,1. Inspect fields with screen reader,Fields announce correct labels and states,High
+TC_019,Accessibility,Verify high contrast mode readability,1. Enable high contrast mode,Text and fields remain clearly distinguishable,High
+TC_020,Security & Compliance,Verify HTTPS enforcement,1. Attempt to access via http://,Redirects to https://,High
+TC_021,Security & Compliance,Verify rate limiting on failed attempts,1. Submit incorrect password 10 times,Account temporarily locked or rate limited,High
+TC_022,Security & Compliance,Verify no sensitive data in URL,1. Perform login,URL does not contain password or tokens,High
+TC_023,Security & Compliance,Verify XSS protection on input fields,1. Enter <script>alert(1)</script> in email,"Input is sanitized, script does not execute",High
+TC_024,Performance,Verify page load speed on slow connection,"1. Throttle connection to 3G
+2. Load page",Core assets load efficiently,High
+TC_025,Performance,Verify asset optimization (minified JS/CSS),1. Inspect network tab,JS/CSS files are minified and compressed,Critical
+TC_026,Integration & Third-Party,Verify Google Social Login,"1. Click 'Sign in with Google'
+2. Authenticate",Logs in via Google account,Critical
+TC_027,Integration & Third-Party,Verify Microsoft Social Login,"1. Click 'Sign in with Microsoft'
+2. Authenticate",Logs in via Microsoft account,High
+TC_028,Integration & Third-Party,Verify Analytics event on login success,"1. Login successfully
+2. Check network requests",Analytics tracking event sent for successful login,Critical
+TC_029,Authentication System,Verify valid email and password login - Device Compatibility Variation 29,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Device Compatibility condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Low
+TC_030,Integration & Third-Party,Verify Analytics event on login success - Device Compatibility Variation 30,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Device Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_031,Accessibility,Verify screen reader ARIA labels - Boundary Value Variation 31,"1. Inspect fields with screen reader
+Note: Test specifically for Boundary Value condition.",Fields announce correct labels and states (System handles condition gracefully),Low
+TC_032,Performance,Verify page load speed on slow connection - Negative Variation 32,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_033,Security & Compliance,Verify HTTPS enforcement - Localization Variation 33,"1. Attempt to access via http://
+Note: Test specifically for Localization condition.",Redirects to https:// (System handles condition gracefully),Low
+TC_034,Integration & Third-Party,Verify Analytics event on login success - Negative Variation 34,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Negative condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_035,Security & Compliance,Verify XSS protection on input fields - Negative Variation 35,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Negative condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Low
+TC_036,Performance,Verify page load speed on slow connection - Localization Variation 36,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_037,Accessibility,Verify screen reader ARIA labels - Localization Variation 37,"1. Inspect fields with screen reader
+Note: Test specifically for Localization condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_038,User Input Validation,Verify email format validation (missing @) - Negative Variation 38,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Negative condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),High
+TC_039,Authentication System,Verify session timeout after inactivity - Device Compatibility Variation 39,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Device Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_040,Accessibility,Verify high contrast mode readability - Boundary Value Variation 40,"1. Enable high contrast mode
+Note: Test specifically for Boundary Value condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_041,Performance,Verify page load speed on slow connection - Edge Case Variation 41,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_042,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 42,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_043,Integration & Third-Party,Verify Microsoft Social Login - Negative Variation 43,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_044,Accessibility,Verify keyboard navigation (Tab key) - Edge Case Variation 44,"1. Use Tab key to navigate fields
+Note: Test specifically for Edge Case condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Low
+TC_045,Integration & Third-Party,Verify Analytics event on login success - Localization Variation 45,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Localization condition.",Analytics tracking event sent for successful login (System handles condition gracefully),High
+TC_046,Security & Compliance,Verify XSS protection on input fields - Edge Case Variation 46,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Edge Case condition.","Input is sanitized, script does not execute (System handles condition gracefully)",High
+TC_047,Password Management,Verify 'Forgot Password' link navigation - Localization Variation 47,"1. Click 'Forgot Password'
+Note: Test specifically for Localization condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_048,Security & Compliance,Verify no sensitive data in URL - Device Compatibility Variation 48,"1. Perform login
+Note: Test specifically for Device Compatibility condition.",URL does not contain password or tokens (System handles condition gracefully),Low
+TC_049,Password Management,Verify 'Forgot Password' link navigation - Edge Case Variation 49,"1. Click 'Forgot Password'
+Note: Test specifically for Edge Case condition.",Navigates to password reset page (System handles condition gracefully),Medium
+TC_050,Authentication System,Verify session timeout after inactivity - Negative Variation 50,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Negative condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_051,Performance,Verify page load speed on slow connection - Negative Variation 51,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_052,Accessibility,Verify high contrast mode readability - Edge Case Variation 52,"1. Enable high contrast mode
+Note: Test specifically for Edge Case condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_053,Authentication System,Verify valid email and password login - Localization Variation 53,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Localization condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_054,User Experience (UX),Verify login page load time - Boundary Value Variation 54,"1. Open login page
+Note: Test specifically for Boundary Value condition.",Page loads within 2 seconds (System handles condition gracefully),High
+TC_055,Accessibility,Verify screen reader ARIA labels - Localization Variation 55,"1. Inspect fields with screen reader
+Note: Test specifically for Localization condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_056,Integration & Third-Party,Verify Microsoft Social Login - Localization Variation 56,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_057,Authentication System,Verify session timeout after inactivity - Edge Case Variation 57,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Edge Case condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_058,Accessibility,Verify keyboard navigation (Tab key) - Browser Compatibility Variation 58,"1. Use Tab key to navigate fields
+Note: Test specifically for Browser Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_059,User Input Validation,Verify required fields validation - Localization Variation 59,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Localization condition.",Error messages shown for required fields (System handles condition gracefully),High
+TC_060,User Input Validation,Verify password strength indicator - Browser Compatibility Variation 60,"1. Type weak password in new password field
+Note: Test specifically for Browser Compatibility condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Medium
+TC_061,Integration & Third-Party,Verify Google Social Login - Negative Variation 61,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_062,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 62,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_063,User Experience (UX),Verify Light/Dark mode toggle - Negative Variation 63,"1. Click theme toggle
+Note: Test specifically for Negative condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_064,Password Management,Verify 'Forgot Password' link navigation - Localization Variation 64,"1. Click 'Forgot Password'
+Note: Test specifically for Localization condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_065,Performance,Verify page load speed on slow connection - Localization Variation 65,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_066,Performance,Verify page load speed on slow connection - Negative Variation 66,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_067,User Input Validation,Verify required fields validation - Negative Variation 67,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Negative condition.",Error messages shown for required fields (System handles condition gracefully),Medium
+TC_068,Password Management,Verify password reset token generation - Device Compatibility Variation 68,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Device Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_069,User Input Validation,Verify email format validation (missing @) - Device Compatibility Variation 69,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Device Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Low
+TC_070,User Input Validation,Verify auto-focus on email field - Boundary Value Variation 70,"1. Open app.vwo.com login page
+Note: Test specifically for Boundary Value condition.",Email field is focused automatically (System handles condition gracefully),Medium
+TC_071,Password Management,Verify password complexity requirements - Negative Variation 71,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Negative condition.",Error indicating complexity requirements (System handles condition gracefully),Low
+TC_072,Integration & Third-Party,Verify Microsoft Social Login - Negative Variation 72,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_073,Password Management,Verify password reset token generation - Boundary Value Variation 73,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Boundary Value condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_074,Accessibility,Verify keyboard navigation (Tab key) - Boundary Value Variation 74,"1. Use Tab key to navigate fields
+Note: Test specifically for Boundary Value condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_075,Accessibility,Verify screen reader ARIA labels - Edge Case Variation 75,"1. Inspect fields with screen reader
+Note: Test specifically for Edge Case condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_076,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 76,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_077,User Experience (UX),Verify responsive design on mobile viewport - Edge Case Variation 77,"1. Resize window to mobile width
+Note: Test specifically for Edge Case condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Low
+TC_078,User Experience (UX),Verify Light/Dark mode toggle - Localization Variation 78,"1. Click theme toggle
+Note: Test specifically for Localization condition.",UI switches between light and dark themes (System handles condition gracefully),Low
+TC_079,User Experience (UX),Verify Light/Dark mode toggle - Edge Case Variation 79,"1. Click theme toggle
+Note: Test specifically for Edge Case condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_080,Security & Compliance,Verify no sensitive data in URL - Negative Variation 80,"1. Perform login
+Note: Test specifically for Negative condition.",URL does not contain password or tokens (System handles condition gracefully),High
+TC_081,User Experience (UX),Verify login page load time - Browser Compatibility Variation 81,"1. Open login page
+Note: Test specifically for Browser Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_082,User Input Validation,Verify email format validation (missing @) - Boundary Value Variation 82,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Boundary Value condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_083,Password Management,Verify 'Forgot Password' link navigation - Browser Compatibility Variation 83,"1. Click 'Forgot Password'
+Note: Test specifically for Browser Compatibility condition.",Navigates to password reset page (System handles condition gracefully),Medium
+TC_084,Security & Compliance,Verify no sensitive data in URL - Edge Case Variation 84,"1. Perform login
+Note: Test specifically for Edge Case condition.",URL does not contain password or tokens (System handles condition gracefully),High
+TC_085,Integration & Third-Party,Verify Google Social Login - Negative Variation 85,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_086,User Experience (UX),Verify login page load time - Negative Variation 86,"1. Open login page
+Note: Test specifically for Negative condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_087,Security & Compliance,Verify XSS protection on input fields - Edge Case Variation 87,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Edge Case condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_088,Security & Compliance,Verify rate limiting on failed attempts - Negative Variation 88,"1. Submit incorrect password 10 times
+Note: Test specifically for Negative condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_089,User Input Validation,Verify required fields validation - Localization Variation 89,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Localization condition.",Error messages shown for required fields (System handles condition gracefully),High
+TC_090,Integration & Third-Party,Verify Google Social Login - Edge Case Variation 90,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Google account (System handles condition gracefully),High
+TC_091,User Input Validation,Verify required fields validation - Localization Variation 91,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Localization condition.",Error messages shown for required fields (System handles condition gracefully),Medium
+TC_092,User Input Validation,Verify auto-focus on email field - Browser Compatibility Variation 92,"1. Open app.vwo.com login page
+Note: Test specifically for Browser Compatibility condition.",Email field is focused automatically (System handles condition gracefully),High
+TC_093,Password Management,Verify password complexity requirements - Device Compatibility Variation 93,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Device Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_094,User Experience (UX),Verify responsive design on mobile viewport - Boundary Value Variation 94,"1. Resize window to mobile width
+Note: Test specifically for Boundary Value condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_095,User Experience (UX),Verify responsive design on mobile viewport - Browser Compatibility Variation 95,"1. Resize window to mobile width
+Note: Test specifically for Browser Compatibility condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_096,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 96,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),High
+TC_097,Password Management,Verify password complexity requirements - Device Compatibility Variation 97,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Device Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_098,User Experience (UX),Verify responsive design on mobile viewport - Edge Case Variation 98,"1. Resize window to mobile width
+Note: Test specifically for Edge Case condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_099,Authentication System,Verify session timeout after inactivity - Negative Variation 99,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Negative condition.",User is logged out and redirected to login page (System handles condition gracefully),Medium
+TC_100,Performance,Verify asset optimization (minified JS/CSS) - Localization Variation 100,"1. Inspect network tab
+Note: Test specifically for Localization condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_101,Accessibility,Verify keyboard navigation (Tab key) - Negative Variation 101,"1. Use Tab key to navigate fields
+Note: Test specifically for Negative condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_102,User Experience (UX),Verify login page load time - Device Compatibility Variation 102,"1. Open login page
+Note: Test specifically for Device Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_103,User Experience (UX),Verify responsive design on mobile viewport - Localization Variation 103,"1. Resize window to mobile width
+Note: Test specifically for Localization condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Low
+TC_104,Integration & Third-Party,Verify Microsoft Social Login - Browser Compatibility Variation 104,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_105,User Input Validation,Verify email format validation (missing @) - Edge Case Variation 105,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Edge Case condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_106,User Experience (UX),Verify loading state during authentication - Edge Case Variation 106,"1. Enter credentials and click Login
+Note: Test specifically for Edge Case condition.",Button shows loading spinner while processing (System handles condition gracefully),Medium
+TC_107,User Experience (UX),Verify Light/Dark mode toggle - Browser Compatibility Variation 107,"1. Click theme toggle
+Note: Test specifically for Browser Compatibility condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_108,Performance,Verify asset optimization (minified JS/CSS) - Boundary Value Variation 108,"1. Inspect network tab
+Note: Test specifically for Boundary Value condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_109,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 109,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_110,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 110,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_111,User Input Validation,Verify email format validation (missing @) - Device Compatibility Variation 111,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Device Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),High
+TC_112,User Experience (UX),Verify Light/Dark mode toggle - Browser Compatibility Variation 112,"1. Click theme toggle
+Note: Test specifically for Browser Compatibility condition.",UI switches between light and dark themes (System handles condition gracefully),Medium
+TC_113,Performance,Verify page load speed on slow connection - Localization Variation 113,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_114,Security & Compliance,Verify XSS protection on input fields - Edge Case Variation 114,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Edge Case condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_115,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 115,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_116,Integration & Third-Party,Verify Microsoft Social Login - Localization Variation 116,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_117,Password Management,Verify 'Forgot Password' link navigation - Device Compatibility Variation 117,"1. Click 'Forgot Password'
+Note: Test specifically for Device Compatibility condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_118,Integration & Third-Party,Verify Google Social Login - Device Compatibility Variation 118,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Google account (System handles condition gracefully),High
+TC_119,Password Management,Verify 'Forgot Password' link navigation - Device Compatibility Variation 119,"1. Click 'Forgot Password'
+Note: Test specifically for Device Compatibility condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_120,User Input Validation,Verify auto-focus on email field - Negative Variation 120,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),High
+TC_121,Accessibility,Verify keyboard navigation (Tab key) - Boundary Value Variation 121,"1. Use Tab key to navigate fields
+Note: Test specifically for Boundary Value condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_122,User Experience (UX),Verify loading state during authentication - Device Compatibility Variation 122,"1. Enter credentials and click Login
+Note: Test specifically for Device Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_123,User Experience (UX),Verify login page load time - Browser Compatibility Variation 123,"1. Open login page
+Note: Test specifically for Browser Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_124,User Input Validation,Verify password strength indicator - Edge Case Variation 124,"1. Type weak password in new password field
+Note: Test specifically for Edge Case condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Medium
+TC_125,Performance,Verify page load speed on slow connection - Device Compatibility Variation 125,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Device Compatibility condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_126,Integration & Third-Party,Verify Analytics event on login success - Negative Variation 126,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Negative condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_127,Accessibility,Verify high contrast mode readability - Boundary Value Variation 127,"1. Enable high contrast mode
+Note: Test specifically for Boundary Value condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_128,Integration & Third-Party,Verify Analytics event on login success - Boundary Value Variation 128,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Boundary Value condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_129,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 129,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_130,User Experience (UX),Verify responsive design on mobile viewport - Browser Compatibility Variation 130,"1. Resize window to mobile width
+Note: Test specifically for Browser Compatibility condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_131,Authentication System,Verify login via SSO - Browser Compatibility Variation 131,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in via SSO (System handles condition gracefully),High
+TC_132,Accessibility,Verify keyboard navigation (Tab key) - Negative Variation 132,"1. Use Tab key to navigate fields
+Note: Test specifically for Negative condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Low
+TC_133,Authentication System,Verify login via SSO - Negative Variation 133,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Negative condition.",User successfully logs in via SSO (System handles condition gracefully),Low
+TC_134,Authentication System,Verify MFA prompt after password - Device Compatibility Variation 134,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Device Compatibility condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Low
+TC_135,Integration & Third-Party,Verify Microsoft Social Login - Browser Compatibility Variation 135,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_136,Password Management,Verify 'Forgot Password' link navigation - Localization Variation 136,"1. Click 'Forgot Password'
+Note: Test specifically for Localization condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_137,Authentication System,Verify session timeout after inactivity - Device Compatibility Variation 137,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Device Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_138,Performance,Verify page load speed on slow connection - Localization Variation 138,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_139,Password Management,Verify 'Forgot Password' link navigation - Browser Compatibility Variation 139,"1. Click 'Forgot Password'
+Note: Test specifically for Browser Compatibility condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_140,Authentication System,Verify MFA prompt after password - Device Compatibility Variation 140,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Device Compatibility condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Medium
+TC_141,Performance,Verify asset optimization (minified JS/CSS) - Boundary Value Variation 141,"1. Inspect network tab
+Note: Test specifically for Boundary Value condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_142,Integration & Third-Party,Verify Microsoft Social Login - Device Compatibility Variation 142,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_143,Performance,Verify page load speed on slow connection - Edge Case Variation 143,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_144,Performance,Verify page load speed on slow connection - Localization Variation 144,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_145,Integration & Third-Party,Verify Microsoft Social Login - Localization Variation 145,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_146,Security & Compliance,Verify rate limiting on failed attempts - Negative Variation 146,"1. Submit incorrect password 10 times
+Note: Test specifically for Negative condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_147,Security & Compliance,Verify XSS protection on input fields - Edge Case Variation 147,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Edge Case condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Low
+TC_148,Performance,Verify asset optimization (minified JS/CSS) - Boundary Value Variation 148,"1. Inspect network tab
+Note: Test specifically for Boundary Value condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_149,Security & Compliance,Verify rate limiting on failed attempts - Device Compatibility Variation 149,"1. Submit incorrect password 10 times
+Note: Test specifically for Device Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_150,Security & Compliance,Verify rate limiting on failed attempts - Boundary Value Variation 150,"1. Submit incorrect password 10 times
+Note: Test specifically for Boundary Value condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_151,Performance,Verify page load speed on slow connection - Browser Compatibility Variation 151,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Browser Compatibility condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_152,Integration & Third-Party,Verify Analytics event on login success - Boundary Value Variation 152,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Boundary Value condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_153,Security & Compliance,Verify XSS protection on input fields - Negative Variation 153,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Negative condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_154,Password Management,Verify 'Forgot Password' link navigation - Boundary Value Variation 154,"1. Click 'Forgot Password'
+Note: Test specifically for Boundary Value condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_155,Authentication System,Verify session timeout after inactivity - Localization Variation 155,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Localization condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_156,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 156,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_157,User Experience (UX),Verify loading state during authentication - Edge Case Variation 157,"1. Enter credentials and click Login
+Note: Test specifically for Edge Case condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_158,Accessibility,Verify keyboard navigation (Tab key) - Localization Variation 158,"1. Use Tab key to navigate fields
+Note: Test specifically for Localization condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_159,User Experience (UX),Verify Light/Dark mode toggle - Localization Variation 159,"1. Click theme toggle
+Note: Test specifically for Localization condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_160,Integration & Third-Party,Verify Microsoft Social Login - Browser Compatibility Variation 160,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_161,User Experience (UX),Verify loading state during authentication - Device Compatibility Variation 161,"1. Enter credentials and click Login
+Note: Test specifically for Device Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),Medium
+TC_162,Integration & Third-Party,Verify Analytics event on login success - Browser Compatibility Variation 162,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Browser Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),High
+TC_163,User Experience (UX),Verify loading state during authentication - Boundary Value Variation 163,"1. Enter credentials and click Login
+Note: Test specifically for Boundary Value condition.",Button shows loading spinner while processing (System handles condition gracefully),Low
+TC_164,Accessibility,Verify screen reader ARIA labels - Boundary Value Variation 164,"1. Inspect fields with screen reader
+Note: Test specifically for Boundary Value condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_165,User Experience (UX),Verify login page load time - Negative Variation 165,"1. Open login page
+Note: Test specifically for Negative condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_166,Authentication System,Verify login via SSO - Browser Compatibility Variation 166,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in via SSO (System handles condition gracefully),Medium
+TC_167,Authentication System,Verify login via SSO - Edge Case Variation 167,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Edge Case condition.",User successfully logs in via SSO (System handles condition gracefully),Low
+TC_168,Security & Compliance,Verify rate limiting on failed attempts - Device Compatibility Variation 168,"1. Submit incorrect password 10 times
+Note: Test specifically for Device Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_169,Performance,Verify page load speed on slow connection - Negative Variation 169,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_170,Password Management,Verify password complexity requirements - Edge Case Variation 170,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Edge Case condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_171,User Experience (UX),Verify login page load time - Localization Variation 171,"1. Open login page
+Note: Test specifically for Localization condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_172,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 172,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_173,Performance,Verify page load speed on slow connection - Device Compatibility Variation 173,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Device Compatibility condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_174,Authentication System,Verify valid email and password login - Negative Variation 174,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Low
+TC_175,Accessibility,Verify keyboard navigation (Tab key) - Localization Variation 175,"1. Use Tab key to navigate fields
+Note: Test specifically for Localization condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_176,Integration & Third-Party,Verify Google Social Login - Browser Compatibility Variation 176,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Google account (System handles condition gracefully),Low
+TC_177,Security & Compliance,Verify no sensitive data in URL - Boundary Value Variation 177,"1. Perform login
+Note: Test specifically for Boundary Value condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_178,Integration & Third-Party,Verify Analytics event on login success - Localization Variation 178,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Localization condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_179,Password Management,Verify password reset token generation - Device Compatibility Variation 179,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Device Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_180,Authentication System,Verify session timeout after inactivity - Boundary Value Variation 180,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Boundary Value condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_181,User Input Validation,Verify required fields validation - Localization Variation 181,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Localization condition.",Error messages shown for required fields (System handles condition gracefully),High
+TC_182,Integration & Third-Party,Verify Microsoft Social Login - Edge Case Variation 182,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_183,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 183,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_184,Integration & Third-Party,Verify Google Social Login - Device Compatibility Variation 184,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_185,Authentication System,Verify valid email and password login - Boundary Value Variation 185,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_186,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 186,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_187,User Input Validation,Verify auto-focus on email field - Negative Variation 187,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),High
+TC_188,User Experience (UX),Verify Light/Dark mode toggle - Edge Case Variation 188,"1. Click theme toggle
+Note: Test specifically for Edge Case condition.",UI switches between light and dark themes (System handles condition gracefully),Medium
+TC_189,Integration & Third-Party,Verify Analytics event on login success - Localization Variation 189,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Localization condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_190,Security & Compliance,Verify rate limiting on failed attempts - Localization Variation 190,"1. Submit incorrect password 10 times
+Note: Test specifically for Localization condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_191,Accessibility,Verify high contrast mode readability - Localization Variation 191,"1. Enable high contrast mode
+Note: Test specifically for Localization condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_192,Password Management,Verify password complexity requirements - Localization Variation 192,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Localization condition.",Error indicating complexity requirements (System handles condition gracefully),High
+TC_193,Password Management,Verify password complexity requirements - Browser Compatibility Variation 193,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Browser Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Low
+TC_194,User Experience (UX),Verify Light/Dark mode toggle - Negative Variation 194,"1. Click theme toggle
+Note: Test specifically for Negative condition.",UI switches between light and dark themes (System handles condition gracefully),Medium
+TC_195,Password Management,Verify 'Forgot Password' link navigation - Negative Variation 195,"1. Click 'Forgot Password'
+Note: Test specifically for Negative condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_196,Performance,Verify page load speed on slow connection - Device Compatibility Variation 196,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Device Compatibility condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_197,Security & Compliance,Verify no sensitive data in URL - Localization Variation 197,"1. Perform login
+Note: Test specifically for Localization condition.",URL does not contain password or tokens (System handles condition gracefully),High
+TC_198,Performance,Verify page load speed on slow connection - Edge Case Variation 198,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_199,Accessibility,Verify high contrast mode readability - Edge Case Variation 199,"1. Enable high contrast mode
+Note: Test specifically for Edge Case condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_200,Performance,Verify page load speed on slow connection - Browser Compatibility Variation 200,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Browser Compatibility condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_201,Password Management,Verify password reset token generation - Edge Case Variation 201,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Edge Case condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_202,User Experience (UX),Verify login page load time - Negative Variation 202,"1. Open login page
+Note: Test specifically for Negative condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_203,Accessibility,Verify keyboard navigation (Tab key) - Device Compatibility Variation 203,"1. Use Tab key to navigate fields
+Note: Test specifically for Device Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_204,Password Management,Verify password complexity requirements - Device Compatibility Variation 204,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Device Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),High
+TC_205,Integration & Third-Party,Verify Analytics event on login success - Edge Case Variation 205,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Edge Case condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_206,Performance,Verify page load speed on slow connection - Edge Case Variation 206,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_207,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 207,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_208,User Experience (UX),Verify loading state during authentication - Negative Variation 208,"1. Enter credentials and click Login
+Note: Test specifically for Negative condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_209,User Experience (UX),Verify login page load time - Browser Compatibility Variation 209,"1. Open login page
+Note: Test specifically for Browser Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),High
+TC_210,User Experience (UX),Verify login page load time - Negative Variation 210,"1. Open login page
+Note: Test specifically for Negative condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_211,Authentication System,Verify valid email and password login - Boundary Value Variation 211,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Low
+TC_212,User Experience (UX),Verify Light/Dark mode toggle - Localization Variation 212,"1. Click theme toggle
+Note: Test specifically for Localization condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_213,Authentication System,Verify session timeout after inactivity - Device Compatibility Variation 213,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Device Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_214,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 214,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_215,Security & Compliance,Verify rate limiting on failed attempts - Negative Variation 215,"1. Submit incorrect password 10 times
+Note: Test specifically for Negative condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_216,Performance,Verify page load speed on slow connection - Boundary Value Variation 216,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Boundary Value condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_217,User Experience (UX),Verify loading state during authentication - Browser Compatibility Variation 217,"1. Enter credentials and click Login
+Note: Test specifically for Browser Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_218,Password Management,Verify 'Forgot Password' link navigation - Boundary Value Variation 218,"1. Click 'Forgot Password'
+Note: Test specifically for Boundary Value condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_219,Authentication System,Verify invalid email and valid password login - Boundary Value Variation 219,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),Medium
+TC_220,User Experience (UX),Verify loading state during authentication - Negative Variation 220,"1. Enter credentials and click Login
+Note: Test specifically for Negative condition.",Button shows loading spinner while processing (System handles condition gracefully),Low
+TC_221,User Experience (UX),Verify login page load time - Device Compatibility Variation 221,"1. Open login page
+Note: Test specifically for Device Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_222,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 222,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_223,Integration & Third-Party,Verify Microsoft Social Login - Edge Case Variation 223,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_224,Authentication System,Verify valid email and password login - Negative Variation 224,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_225,Accessibility,Verify screen reader ARIA labels - Boundary Value Variation 225,"1. Inspect fields with screen reader
+Note: Test specifically for Boundary Value condition.",Fields announce correct labels and states (System handles condition gracefully),Low
+TC_226,Security & Compliance,Verify no sensitive data in URL - Device Compatibility Variation 226,"1. Perform login
+Note: Test specifically for Device Compatibility condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_227,Security & Compliance,Verify XSS protection on input fields - Boundary Value Variation 227,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Boundary Value condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_228,User Input Validation,Verify auto-focus on email field - Negative Variation 228,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),Low
+TC_229,Security & Compliance,Verify XSS protection on input fields - Browser Compatibility Variation 229,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Browser Compatibility condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Low
+TC_230,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 230,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_231,User Experience (UX),Verify login page load time - Edge Case Variation 231,"1. Open login page
+Note: Test specifically for Edge Case condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_232,Accessibility,Verify high contrast mode readability - Localization Variation 232,"1. Enable high contrast mode
+Note: Test specifically for Localization condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_233,Password Management,Verify password reset token generation - Device Compatibility Variation 233,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Device Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_234,Performance,Verify page load speed on slow connection - Device Compatibility Variation 234,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Device Compatibility condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_235,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 235,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_236,Password Management,Verify password complexity requirements - Negative Variation 236,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Negative condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_237,Authentication System,Verify valid email and password login - Device Compatibility Variation 237,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Device Compatibility condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_238,Accessibility,Verify screen reader ARIA labels - Edge Case Variation 238,"1. Inspect fields with screen reader
+Note: Test specifically for Edge Case condition.",Fields announce correct labels and states (System handles condition gracefully),Low
+TC_239,Authentication System,Verify session timeout after inactivity - Localization Variation 239,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Localization condition.",User is logged out and redirected to login page (System handles condition gracefully),Medium
+TC_240,User Input Validation,Verify password strength indicator - Boundary Value Variation 240,"1. Type weak password in new password field
+Note: Test specifically for Boundary Value condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_241,User Experience (UX),Verify responsive design on mobile viewport - Device Compatibility Variation 241,"1. Resize window to mobile width
+Note: Test specifically for Device Compatibility condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Medium
+TC_242,Integration & Third-Party,Verify Microsoft Social Login - Edge Case Variation 242,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_243,Authentication System,Verify valid email and password login - Browser Compatibility Variation 243,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_244,User Experience (UX),Verify login page load time - Device Compatibility Variation 244,"1. Open login page
+Note: Test specifically for Device Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),High
+TC_245,Accessibility,Verify screen reader ARIA labels - Edge Case Variation 245,"1. Inspect fields with screen reader
+Note: Test specifically for Edge Case condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_246,Integration & Third-Party,Verify Google Social Login - Negative Variation 246,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Google account (System handles condition gracefully),High
+TC_247,Integration & Third-Party,Verify Analytics event on login success - Browser Compatibility Variation 247,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Browser Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_248,Password Management,Verify 'Forgot Password' link navigation - Device Compatibility Variation 248,"1. Click 'Forgot Password'
+Note: Test specifically for Device Compatibility condition.",Navigates to password reset page (System handles condition gracefully),Medium
+TC_249,User Experience (UX),Verify loading state during authentication - Edge Case Variation 249,"1. Enter credentials and click Login
+Note: Test specifically for Edge Case condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_250,Authentication System,Verify valid email and password login - Boundary Value Variation 250,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_251,User Experience (UX),Verify loading state during authentication - Browser Compatibility Variation 251,"1. Enter credentials and click Login
+Note: Test specifically for Browser Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),Low
+TC_252,Performance,Verify asset optimization (minified JS/CSS) - Localization Variation 252,"1. Inspect network tab
+Note: Test specifically for Localization condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_253,Performance,Verify page load speed on slow connection - Boundary Value Variation 253,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Boundary Value condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_254,User Input Validation,Verify email format validation (missing @) - Device Compatibility Variation 254,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Device Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_255,Security & Compliance,Verify rate limiting on failed attempts - Browser Compatibility Variation 255,"1. Submit incorrect password 10 times
+Note: Test specifically for Browser Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_256,Integration & Third-Party,Verify Analytics event on login success - Browser Compatibility Variation 256,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Browser Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_257,User Experience (UX),Verify loading state during authentication - Boundary Value Variation 257,"1. Enter credentials and click Login
+Note: Test specifically for Boundary Value condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_258,Password Management,Verify 'Forgot Password' link navigation - Browser Compatibility Variation 258,"1. Click 'Forgot Password'
+Note: Test specifically for Browser Compatibility condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_259,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 259,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_260,Integration & Third-Party,Verify Google Social Login - Localization Variation 260,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Google account (System handles condition gracefully),High
+TC_261,Integration & Third-Party,Verify Microsoft Social Login - Device Compatibility Variation 261,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_262,User Experience (UX),Verify Light/Dark mode toggle - Boundary Value Variation 262,"1. Click theme toggle
+Note: Test specifically for Boundary Value condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_263,Password Management,Verify password reset token generation - Localization Variation 263,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Localization condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_264,Security & Compliance,Verify XSS protection on input fields - Device Compatibility Variation 264,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Device Compatibility condition.","Input is sanitized, script does not execute (System handles condition gracefully)",High
+TC_265,Integration & Third-Party,Verify Google Social Login - Edge Case Variation 265,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_266,Security & Compliance,Verify no sensitive data in URL - Device Compatibility Variation 266,"1. Perform login
+Note: Test specifically for Device Compatibility condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_267,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 267,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_268,Performance,Verify asset optimization (minified JS/CSS) - Localization Variation 268,"1. Inspect network tab
+Note: Test specifically for Localization condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_269,User Experience (UX),Verify Light/Dark mode toggle - Edge Case Variation 269,"1. Click theme toggle
+Note: Test specifically for Edge Case condition.",UI switches between light and dark themes (System handles condition gracefully),Low
+TC_270,Integration & Third-Party,Verify Analytics event on login success - Boundary Value Variation 270,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Boundary Value condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_271,Authentication System,Verify invalid email and valid password login - Localization Variation 271,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Localization condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_272,Accessibility,Verify keyboard navigation (Tab key) - Localization Variation 272,"1. Use Tab key to navigate fields
+Note: Test specifically for Localization condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_273,Authentication System,Verify MFA prompt after password - Localization Variation 273,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Localization condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Low
+TC_274,Password Management,Verify password reset token generation - Localization Variation 274,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Localization condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_275,User Experience (UX),Verify responsive design on mobile viewport - Device Compatibility Variation 275,"1. Resize window to mobile width
+Note: Test specifically for Device Compatibility condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_276,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 276,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_277,Security & Compliance,Verify XSS protection on input fields - Boundary Value Variation 277,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Boundary Value condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Low
+TC_278,User Input Validation,Verify auto-focus on email field - Boundary Value Variation 278,"1. Open app.vwo.com login page
+Note: Test specifically for Boundary Value condition.",Email field is focused automatically (System handles condition gracefully),Medium
+TC_279,User Input Validation,Verify auto-focus on email field - Edge Case Variation 279,"1. Open app.vwo.com login page
+Note: Test specifically for Edge Case condition.",Email field is focused automatically (System handles condition gracefully),Low
+TC_280,User Experience (UX),Verify login page load time - Browser Compatibility Variation 280,"1. Open login page
+Note: Test specifically for Browser Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_281,Integration & Third-Party,Verify Analytics event on login success - Localization Variation 281,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Localization condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_282,Authentication System,Verify invalid email and valid password login - Device Compatibility Variation 282,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Device Compatibility condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_283,Security & Compliance,Verify XSS protection on input fields - Device Compatibility Variation 283,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Device Compatibility condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_284,User Input Validation,Verify password strength indicator - Boundary Value Variation 284,"1. Type weak password in new password field
+Note: Test specifically for Boundary Value condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_285,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 285,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_286,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 286,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_287,User Experience (UX),Verify Light/Dark mode toggle - Boundary Value Variation 287,"1. Click theme toggle
+Note: Test specifically for Boundary Value condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_288,Integration & Third-Party,Verify Analytics event on login success - Boundary Value Variation 288,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Boundary Value condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_289,User Experience (UX),Verify loading state during authentication - Localization Variation 289,"1. Enter credentials and click Login
+Note: Test specifically for Localization condition.",Button shows loading spinner while processing (System handles condition gracefully),Low
+TC_290,Password Management,Verify 'Forgot Password' link navigation - Browser Compatibility Variation 290,"1. Click 'Forgot Password'
+Note: Test specifically for Browser Compatibility condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_291,Performance,Verify page load speed on slow connection - Edge Case Variation 291,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_292,User Experience (UX),Verify responsive design on mobile viewport - Edge Case Variation 292,"1. Resize window to mobile width
+Note: Test specifically for Edge Case condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Medium
+TC_293,Performance,Verify page load speed on slow connection - Localization Variation 293,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_294,Integration & Third-Party,Verify Google Social Login - Localization Variation 294,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_295,Authentication System,Verify session timeout after inactivity - Edge Case Variation 295,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Edge Case condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_296,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 296,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Medium
+TC_297,Security & Compliance,Verify no sensitive data in URL - Device Compatibility Variation 297,"1. Perform login
+Note: Test specifically for Device Compatibility condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_298,Password Management,Verify password reset token generation - Device Compatibility Variation 298,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Device Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_299,Accessibility,Verify high contrast mode readability - Edge Case Variation 299,"1. Enable high contrast mode
+Note: Test specifically for Edge Case condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_300,Integration & Third-Party,Verify Analytics event on login success - Boundary Value Variation 300,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Boundary Value condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_301,Security & Compliance,Verify HTTPS enforcement - Boundary Value Variation 301,"1. Attempt to access via http://
+Note: Test specifically for Boundary Value condition.",Redirects to https:// (System handles condition gracefully),Low
+TC_302,Performance,Verify asset optimization (minified JS/CSS) - Edge Case Variation 302,"1. Inspect network tab
+Note: Test specifically for Edge Case condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_303,User Experience (UX),Verify loading state during authentication - Device Compatibility Variation 303,"1. Enter credentials and click Login
+Note: Test specifically for Device Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),Medium
+TC_304,Security & Compliance,Verify no sensitive data in URL - Browser Compatibility Variation 304,"1. Perform login
+Note: Test specifically for Browser Compatibility condition.",URL does not contain password or tokens (System handles condition gracefully),Low
+TC_305,User Input Validation,Verify password strength indicator - Negative Variation 305,"1. Type weak password in new password field
+Note: Test specifically for Negative condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_306,Accessibility,Verify high contrast mode readability - Edge Case Variation 306,"1. Enable high contrast mode
+Note: Test specifically for Edge Case condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_307,Security & Compliance,Verify no sensitive data in URL - Edge Case Variation 307,"1. Perform login
+Note: Test specifically for Edge Case condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_308,User Experience (UX),Verify responsive design on mobile viewport - Negative Variation 308,"1. Resize window to mobile width
+Note: Test specifically for Negative condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_309,Password Management,Verify password complexity requirements - Device Compatibility Variation 309,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Device Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Low
+TC_310,User Experience (UX),Verify login page load time - Negative Variation 310,"1. Open login page
+Note: Test specifically for Negative condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_311,Accessibility,Verify screen reader ARIA labels - Device Compatibility Variation 311,"1. Inspect fields with screen reader
+Note: Test specifically for Device Compatibility condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_312,Accessibility,Verify screen reader ARIA labels - Device Compatibility Variation 312,"1. Inspect fields with screen reader
+Note: Test specifically for Device Compatibility condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_313,Password Management,Verify 'Forgot Password' link navigation - Negative Variation 313,"1. Click 'Forgot Password'
+Note: Test specifically for Negative condition.",Navigates to password reset page (System handles condition gracefully),Medium
+TC_314,Password Management,Verify 'Forgot Password' link navigation - Negative Variation 314,"1. Click 'Forgot Password'
+Note: Test specifically for Negative condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_315,Integration & Third-Party,Verify Microsoft Social Login - Browser Compatibility Variation 315,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_316,Security & Compliance,Verify rate limiting on failed attempts - Browser Compatibility Variation 316,"1. Submit incorrect password 10 times
+Note: Test specifically for Browser Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_317,Accessibility,Verify screen reader ARIA labels - Browser Compatibility Variation 317,"1. Inspect fields with screen reader
+Note: Test specifically for Browser Compatibility condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_318,Accessibility,Verify keyboard navigation (Tab key) - Browser Compatibility Variation 318,"1. Use Tab key to navigate fields
+Note: Test specifically for Browser Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_319,Performance,Verify asset optimization (minified JS/CSS) - Boundary Value Variation 319,"1. Inspect network tab
+Note: Test specifically for Boundary Value condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_320,Security & Compliance,Verify HTTPS enforcement - Localization Variation 320,"1. Attempt to access via http://
+Note: Test specifically for Localization condition.",Redirects to https:// (System handles condition gracefully),High
+TC_321,Integration & Third-Party,Verify Microsoft Social Login - Edge Case Variation 321,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_322,Authentication System,Verify valid email and password login - Localization Variation 322,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Localization condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_323,Security & Compliance,Verify rate limiting on failed attempts - Browser Compatibility Variation 323,"1. Submit incorrect password 10 times
+Note: Test specifically for Browser Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_324,Authentication System,Verify login via SSO - Browser Compatibility Variation 324,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in via SSO (System handles condition gracefully),High
+TC_325,Authentication System,Verify valid email and password login - Edge Case Variation 325,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Edge Case condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_326,Password Management,Verify password complexity requirements - Browser Compatibility Variation 326,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Browser Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_327,Security & Compliance,Verify rate limiting on failed attempts - Device Compatibility Variation 327,"1. Submit incorrect password 10 times
+Note: Test specifically for Device Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_328,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 328,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_329,User Input Validation,Verify required fields validation - Edge Case Variation 329,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Edge Case condition.",Error messages shown for required fields (System handles condition gracefully),Medium
+TC_330,Integration & Third-Party,Verify Analytics event on login success - Edge Case Variation 330,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Edge Case condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_331,Security & Compliance,Verify HTTPS enforcement - Device Compatibility Variation 331,"1. Attempt to access via http://
+Note: Test specifically for Device Compatibility condition.",Redirects to https:// (System handles condition gracefully),High
+TC_332,Authentication System,Verify login via SSO - Browser Compatibility Variation 332,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in via SSO (System handles condition gracefully),High
+TC_333,Authentication System,Verify session timeout after inactivity - Edge Case Variation 333,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Edge Case condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_334,Password Management,Verify password complexity requirements - Localization Variation 334,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Localization condition.",Error indicating complexity requirements (System handles condition gracefully),Low
+TC_335,Authentication System,Verify session timeout after inactivity - Localization Variation 335,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Localization condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_336,Security & Compliance,Verify XSS protection on input fields - Browser Compatibility Variation 336,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Browser Compatibility condition.","Input is sanitized, script does not execute (System handles condition gracefully)",High
+TC_337,User Input Validation,Verify required fields validation - Device Compatibility Variation 337,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Device Compatibility condition.",Error messages shown for required fields (System handles condition gracefully),Low
+TC_338,User Input Validation,Verify password strength indicator - Boundary Value Variation 338,"1. Type weak password in new password field
+Note: Test specifically for Boundary Value condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Medium
+TC_339,User Experience (UX),Verify responsive design on mobile viewport - Negative Variation 339,"1. Resize window to mobile width
+Note: Test specifically for Negative condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_340,Performance,Verify page load speed on slow connection - Boundary Value Variation 340,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Boundary Value condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_341,Authentication System,Verify invalid email and valid password login - Boundary Value Variation 341,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_342,Integration & Third-Party,Verify Microsoft Social Login - Negative Variation 342,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_343,User Experience (UX),Verify responsive design on mobile viewport - Negative Variation 343,"1. Resize window to mobile width
+Note: Test specifically for Negative condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Medium
+TC_344,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 344,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_345,User Input Validation,Verify auto-focus on email field - Negative Variation 345,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),Low
+TC_346,Security & Compliance,Verify HTTPS enforcement - Negative Variation 346,"1. Attempt to access via http://
+Note: Test specifically for Negative condition.",Redirects to https:// (System handles condition gracefully),High
+TC_347,Accessibility,Verify screen reader ARIA labels - Localization Variation 347,"1. Inspect fields with screen reader
+Note: Test specifically for Localization condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_348,Accessibility,Verify keyboard navigation (Tab key) - Edge Case Variation 348,"1. Use Tab key to navigate fields
+Note: Test specifically for Edge Case condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Medium
+TC_349,Integration & Third-Party,Verify Google Social Login - Boundary Value Variation 349,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Boundary Value condition.",Logs in via Google account (System handles condition gracefully),Low
+TC_350,Integration & Third-Party,Verify Microsoft Social Login - Boundary Value Variation 350,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Boundary Value condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_351,Authentication System,Verify valid email and password login - Browser Compatibility Variation 351,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Browser Compatibility condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_352,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 352,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_353,Password Management,Verify 'Forgot Password' link navigation - Browser Compatibility Variation 353,"1. Click 'Forgot Password'
+Note: Test specifically for Browser Compatibility condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_354,User Input Validation,Verify password strength indicator - Device Compatibility Variation 354,"1. Type weak password in new password field
+Note: Test specifically for Device Compatibility condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_355,Accessibility,Verify screen reader ARIA labels - Negative Variation 355,"1. Inspect fields with screen reader
+Note: Test specifically for Negative condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_356,Security & Compliance,Verify rate limiting on failed attempts - Browser Compatibility Variation 356,"1. Submit incorrect password 10 times
+Note: Test specifically for Browser Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_357,Authentication System,Verify valid email and password login - Negative Variation 357,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Low
+TC_358,User Input Validation,Verify password strength indicator - Edge Case Variation 358,"1. Type weak password in new password field
+Note: Test specifically for Edge Case condition.",Strength indicator shows 'Weak' (System handles condition gracefully),High
+TC_359,Authentication System,Verify invalid email and valid password login - Boundary Value Variation 359,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_360,Integration & Third-Party,Verify Microsoft Social Login - Boundary Value Variation 360,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Boundary Value condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_361,User Input Validation,Verify password strength indicator - Browser Compatibility Variation 361,"1. Type weak password in new password field
+Note: Test specifically for Browser Compatibility condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_362,User Experience (UX),Verify login page load time - Device Compatibility Variation 362,"1. Open login page
+Note: Test specifically for Device Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_363,Accessibility,Verify high contrast mode readability - Localization Variation 363,"1. Enable high contrast mode
+Note: Test specifically for Localization condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_364,Performance,Verify page load speed on slow connection - Negative Variation 364,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_365,User Experience (UX),Verify login page load time - Browser Compatibility Variation 365,"1. Open login page
+Note: Test specifically for Browser Compatibility condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_366,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 366,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Low
+TC_367,User Input Validation,Verify auto-focus on email field - Negative Variation 367,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),Low
+TC_368,Integration & Third-Party,Verify Google Social Login - Negative Variation 368,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Google account (System handles condition gracefully),High
+TC_369,Accessibility,Verify screen reader ARIA labels - Localization Variation 369,"1. Inspect fields with screen reader
+Note: Test specifically for Localization condition.",Fields announce correct labels and states (System handles condition gracefully),Medium
+TC_370,Authentication System,Verify login via SSO - Edge Case Variation 370,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Edge Case condition.",User successfully logs in via SSO (System handles condition gracefully),Medium
+TC_371,Password Management,Verify password complexity requirements - Edge Case Variation 371,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Edge Case condition.",Error indicating complexity requirements (System handles condition gracefully),High
+TC_372,Performance,Verify page load speed on slow connection - Edge Case Variation 372,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_373,Performance,Verify page load speed on slow connection - Boundary Value Variation 373,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Boundary Value condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_374,Security & Compliance,Verify XSS protection on input fields - Device Compatibility Variation 374,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Device Compatibility condition.","Input is sanitized, script does not execute (System handles condition gracefully)",Medium
+TC_375,Accessibility,Verify keyboard navigation (Tab key) - Localization Variation 375,"1. Use Tab key to navigate fields
+Note: Test specifically for Localization condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Low
+TC_376,Integration & Third-Party,Verify Google Social Login - Device Compatibility Variation 376,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Google account (System handles condition gracefully),High
+TC_377,Authentication System,Verify MFA prompt after password - Boundary Value Variation 377,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Boundary Value condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),High
+TC_378,Integration & Third-Party,Verify Microsoft Social Login - Device Compatibility Variation 378,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_379,Password Management,Verify password reset token generation - Localization Variation 379,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Localization condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_380,Password Management,Verify 'Forgot Password' link navigation - Boundary Value Variation 380,"1. Click 'Forgot Password'
+Note: Test specifically for Boundary Value condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_381,Security & Compliance,Verify no sensitive data in URL - Boundary Value Variation 381,"1. Perform login
+Note: Test specifically for Boundary Value condition.",URL does not contain password or tokens (System handles condition gracefully),Medium
+TC_382,User Experience (UX),Verify login page load time - Boundary Value Variation 382,"1. Open login page
+Note: Test specifically for Boundary Value condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_383,Integration & Third-Party,Verify Analytics event on login success - Browser Compatibility Variation 383,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Browser Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_384,Password Management,Verify 'Forgot Password' link navigation - Boundary Value Variation 384,"1. Click 'Forgot Password'
+Note: Test specifically for Boundary Value condition.",Navigates to password reset page (System handles condition gracefully),Low
+TC_385,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 385,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_386,User Experience (UX),Verify Light/Dark mode toggle - Localization Variation 386,"1. Click theme toggle
+Note: Test specifically for Localization condition.",UI switches between light and dark themes (System handles condition gracefully),Low
+TC_387,Integration & Third-Party,Verify Analytics event on login success - Negative Variation 387,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Negative condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_388,User Input Validation,Verify auto-focus on email field - Negative Variation 388,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),Medium
+TC_389,Security & Compliance,Verify no sensitive data in URL - Localization Variation 389,"1. Perform login
+Note: Test specifically for Localization condition.",URL does not contain password or tokens (System handles condition gracefully),Low
+TC_390,Authentication System,Verify valid email and password login - Localization Variation 390,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Localization condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_391,Authentication System,Verify MFA prompt after password - Browser Compatibility Variation 391,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Browser Compatibility condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),High
+TC_392,Authentication System,Verify login via SSO - Edge Case Variation 392,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Edge Case condition.",User successfully logs in via SSO (System handles condition gracefully),Medium
+TC_393,Accessibility,Verify high contrast mode readability - Device Compatibility Variation 393,"1. Enable high contrast mode
+Note: Test specifically for Device Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_394,Integration & Third-Party,Verify Microsoft Social Login - Browser Compatibility Variation 394,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Browser Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_395,Integration & Third-Party,Verify Microsoft Social Login - Localization Variation 395,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Localization condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_396,Security & Compliance,Verify rate limiting on failed attempts - Device Compatibility Variation 396,"1. Submit incorrect password 10 times
+Note: Test specifically for Device Compatibility condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_397,Authentication System,Verify valid email and password login - Negative Variation 397,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Low
+TC_398,Password Management,Verify password complexity requirements - Negative Variation 398,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Negative condition.",Error indicating complexity requirements (System handles condition gracefully),Low
+TC_399,User Input Validation,Verify auto-focus on email field - Browser Compatibility Variation 399,"1. Open app.vwo.com login page
+Note: Test specifically for Browser Compatibility condition.",Email field is focused automatically (System handles condition gracefully),Medium
+TC_400,Integration & Third-Party,Verify Analytics event on login success - Edge Case Variation 400,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Edge Case condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_401,Integration & Third-Party,Verify Microsoft Social Login - Boundary Value Variation 401,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Boundary Value condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_402,Security & Compliance,Verify XSS protection on input fields - Negative Variation 402,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Negative condition.","Input is sanitized, script does not execute (System handles condition gracefully)",High
+TC_403,User Input Validation,Verify email format validation (missing @) - Negative Variation 403,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Negative condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),High
+TC_404,Password Management,Verify password complexity requirements - Negative Variation 404,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Negative condition.",Error indicating complexity requirements (System handles condition gracefully),High
+TC_405,Password Management,Verify password reset token generation - Browser Compatibility Variation 405,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Browser Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_406,Accessibility,Verify high contrast mode readability - Boundary Value Variation 406,"1. Enable high contrast mode
+Note: Test specifically for Boundary Value condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_407,Authentication System,Verify session timeout after inactivity - Edge Case Variation 407,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Edge Case condition.",User is logged out and redirected to login page (System handles condition gracefully),Medium
+TC_408,User Experience (UX),Verify responsive design on mobile viewport - Boundary Value Variation 408,"1. Resize window to mobile width
+Note: Test specifically for Boundary Value condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Low
+TC_409,Accessibility,Verify high contrast mode readability - Negative Variation 409,"1. Enable high contrast mode
+Note: Test specifically for Negative condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_410,Integration & Third-Party,Verify Google Social Login - Edge Case Variation 410,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_411,User Input Validation,Verify required fields validation - Edge Case Variation 411,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Edge Case condition.",Error messages shown for required fields (System handles condition gracefully),Medium
+TC_412,Performance,Verify page load speed on slow connection - Localization Variation 412,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_413,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 413,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_414,Security & Compliance,Verify rate limiting on failed attempts - Boundary Value Variation 414,"1. Submit incorrect password 10 times
+Note: Test specifically for Boundary Value condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_415,Security & Compliance,Verify HTTPS enforcement - Boundary Value Variation 415,"1. Attempt to access via http://
+Note: Test specifically for Boundary Value condition.",Redirects to https:// (System handles condition gracefully),Low
+TC_416,Authentication System,Verify invalid email and valid password login - Negative Variation 416,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_417,Password Management,Verify password reset token generation - Browser Compatibility Variation 417,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Browser Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),Low
+TC_418,Integration & Third-Party,Verify Analytics event on login success - Negative Variation 418,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Negative condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_419,Security & Compliance,Verify HTTPS enforcement - Negative Variation 419,"1. Attempt to access via http://
+Note: Test specifically for Negative condition.",Redirects to https:// (System handles condition gracefully),Low
+TC_420,Performance,Verify page load speed on slow connection - Localization Variation 420,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Localization condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_421,Performance,Verify page load speed on slow connection - Device Compatibility Variation 421,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Device Compatibility condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_422,Accessibility,Verify keyboard navigation (Tab key) - Device Compatibility Variation 422,"1. Use Tab key to navigate fields
+Note: Test specifically for Device Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_423,Security & Compliance,Verify no sensitive data in URL - Negative Variation 423,"1. Perform login
+Note: Test specifically for Negative condition.",URL does not contain password or tokens (System handles condition gracefully),Low
+TC_424,User Experience (UX),Verify loading state during authentication - Browser Compatibility Variation 424,"1. Enter credentials and click Login
+Note: Test specifically for Browser Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_425,User Experience (UX),Verify loading state during authentication - Browser Compatibility Variation 425,"1. Enter credentials and click Login
+Note: Test specifically for Browser Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_426,Accessibility,Verify high contrast mode readability - Boundary Value Variation 426,"1. Enable high contrast mode
+Note: Test specifically for Boundary Value condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_427,User Experience (UX),Verify login page load time - Edge Case Variation 427,"1. Open login page
+Note: Test specifically for Edge Case condition.",Page loads within 2 seconds (System handles condition gracefully),Medium
+TC_428,Integration & Third-Party,Verify Analytics event on login success - Edge Case Variation 428,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Edge Case condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Medium
+TC_429,Accessibility,Verify keyboard navigation (Tab key) - Negative Variation 429,"1. Use Tab key to navigate fields
+Note: Test specifically for Negative condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Low
+TC_430,User Input Validation,Verify password strength indicator - Device Compatibility Variation 430,"1. Type weak password in new password field
+Note: Test specifically for Device Compatibility condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Medium
+TC_431,Authentication System,Verify valid email and password login - Negative Variation 431,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_432,Authentication System,Verify session timeout after inactivity - Device Compatibility Variation 432,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Device Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_433,Performance,Verify page load speed on slow connection - Negative Variation 433,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_434,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 434,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Low
+TC_435,Authentication System,Verify session timeout after inactivity - Device Compatibility Variation 435,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Device Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_436,Authentication System,Verify MFA prompt after password - Edge Case Variation 436,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Edge Case condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Medium
+TC_437,Security & Compliance,Verify rate limiting on failed attempts - Boundary Value Variation 437,"1. Submit incorrect password 10 times
+Note: Test specifically for Boundary Value condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_438,Security & Compliance,Verify XSS protection on input fields - Edge Case Variation 438,"1. Enter <script>alert(1)</script> in email
+Note: Test specifically for Edge Case condition.","Input is sanitized, script does not execute (System handles condition gracefully)",High
+TC_439,User Experience (UX),Verify Light/Dark mode toggle - Edge Case Variation 439,"1. Click theme toggle
+Note: Test specifically for Edge Case condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_440,Password Management,Verify password reset token generation - Device Compatibility Variation 440,"1. Enter valid email for reset
+2. Submit
+Note: Test specifically for Device Compatibility condition.",Reset link sent to email with secure token (System handles condition gracefully),High
+TC_441,User Experience (UX),Verify responsive design on mobile viewport - Edge Case Variation 441,"1. Resize window to mobile width
+Note: Test specifically for Edge Case condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Low
+TC_442,Security & Compliance,Verify HTTPS enforcement - Negative Variation 442,"1. Attempt to access via http://
+Note: Test specifically for Negative condition.",Redirects to https:// (System handles condition gracefully),Low
+TC_443,User Input Validation,Verify required fields validation - Negative Variation 443,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Negative condition.",Error messages shown for required fields (System handles condition gracefully),Medium
+TC_444,Password Management,Verify 'Forgot Password' link navigation - Device Compatibility Variation 444,"1. Click 'Forgot Password'
+Note: Test specifically for Device Compatibility condition.",Navigates to password reset page (System handles condition gracefully),Medium
+TC_445,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 445,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Low
+TC_446,User Input Validation,Verify required fields validation - Localization Variation 446,"1. Leave fields empty
+2. Click Login
+Note: Test specifically for Localization condition.",Error messages shown for required fields (System handles condition gracefully),Low
+TC_447,Performance,Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 447,"1. Inspect network tab
+Note: Test specifically for Browser Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_448,Password Management,Verify password complexity requirements - Edge Case Variation 448,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Edge Case condition.",Error indicating complexity requirements (System handles condition gracefully),High
+TC_449,Authentication System,Verify MFA prompt after password - Localization Variation 449,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Localization condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Low
+TC_450,Security & Compliance,Verify rate limiting on failed attempts - Negative Variation 450,"1. Submit incorrect password 10 times
+Note: Test specifically for Negative condition.",Account temporarily locked or rate limited (System handles condition gracefully),Low
+TC_451,User Input Validation,Verify email format validation (missing @) - Localization Variation 451,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Localization condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),High
+TC_452,Authentication System,Verify valid email and password login - Negative Variation 452,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Negative condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_453,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 453,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Low
+TC_454,User Experience (UX),Verify Light/Dark mode toggle - Browser Compatibility Variation 454,"1. Click theme toggle
+Note: Test specifically for Browser Compatibility condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_455,Integration & Third-Party,Verify Google Social Login - Negative Variation 455,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Google account (System handles condition gracefully),Medium
+TC_456,User Experience (UX),Verify responsive design on mobile viewport - Device Compatibility Variation 456,"1. Resize window to mobile width
+Note: Test specifically for Device Compatibility condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",Medium
+TC_457,Accessibility,Verify keyboard navigation (Tab key) - Browser Compatibility Variation 457,"1. Use Tab key to navigate fields
+Note: Test specifically for Browser Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),High
+TC_458,Password Management,Verify 'Forgot Password' link navigation - Negative Variation 458,"1. Click 'Forgot Password'
+Note: Test specifically for Negative condition.",Navigates to password reset page (System handles condition gracefully),High
+TC_459,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 459,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),High
+TC_460,Accessibility,Verify keyboard navigation (Tab key) - Device Compatibility Variation 460,"1. Use Tab key to navigate fields
+Note: Test specifically for Device Compatibility condition.",Focus moves logically across inputs and buttons (System handles condition gracefully),Low
+TC_461,Authentication System,Verify MFA prompt after password - Localization Variation 461,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Localization condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Low
+TC_462,User Experience (UX),Verify loading state during authentication - Negative Variation 462,"1. Enter credentials and click Login
+Note: Test specifically for Negative condition.",Button shows loading spinner while processing (System handles condition gracefully),High
+TC_463,Authentication System,Verify session timeout after inactivity - Browser Compatibility Variation 463,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Browser Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_464,User Experience (UX),Verify Light/Dark mode toggle - Browser Compatibility Variation 464,"1. Click theme toggle
+Note: Test specifically for Browser Compatibility condition.",UI switches between light and dark themes (System handles condition gracefully),High
+TC_465,Integration & Third-Party,Verify Microsoft Social Login - Edge Case Variation 465,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Microsoft account (System handles condition gracefully),Medium
+TC_466,Authentication System,Verify session timeout after inactivity - Browser Compatibility Variation 466,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Browser Compatibility condition.",User is logged out and redirected to login page (System handles condition gracefully),High
+TC_467,Integration & Third-Party,Verify Analytics event on login success - Device Compatibility Variation 467,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Device Compatibility condition.",Analytics tracking event sent for successful login (System handles condition gracefully),Low
+TC_468,Accessibility,Verify screen reader ARIA labels - Device Compatibility Variation 468,"1. Inspect fields with screen reader
+Note: Test specifically for Device Compatibility condition.",Fields announce correct labels and states (System handles condition gracefully),High
+TC_469,User Input Validation,Verify email format validation (missing @) - Browser Compatibility Variation 469,"1. Enter email without @ symbol
+2. Click outside field
+Note: Test specifically for Browser Compatibility condition.",Validation error 'Invalid email format' is shown immediately (System handles condition gracefully),Low
+TC_470,Integration & Third-Party,Verify Google Social Login - Edge Case Variation 470,"1. Click 'Sign in with Google'
+2. Authenticate
+Note: Test specifically for Edge Case condition.",Logs in via Google account (System handles condition gracefully),Low
+TC_471,Security & Compliance,Verify no sensitive data in URL - Boundary Value Variation 471,"1. Perform login
+Note: Test specifically for Boundary Value condition.",URL does not contain password or tokens (System handles condition gracefully),High
+TC_472,Password Management,Verify password complexity requirements - Device Compatibility Variation 472,"1. Attempt to set password without numbers/specials
+Note: Test specifically for Device Compatibility condition.",Error indicating complexity requirements (System handles condition gracefully),Medium
+TC_473,Security & Compliance,Verify rate limiting on failed attempts - Negative Variation 473,"1. Submit incorrect password 10 times
+Note: Test specifically for Negative condition.",Account temporarily locked or rate limited (System handles condition gracefully),Medium
+TC_474,Authentication System,Verify valid email and password login - Localization Variation 474,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Localization condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),High
+TC_475,User Input Validation,Verify password strength indicator - Negative Variation 475,"1. Type weak password in new password field
+Note: Test specifically for Negative condition.",Strength indicator shows 'Weak' (System handles condition gracefully),Low
+TC_476,Integration & Third-Party,Verify Microsoft Social Login - Device Compatibility Variation 476,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Device Compatibility condition.",Logs in via Microsoft account (System handles condition gracefully),High
+TC_477,Authentication System,Verify valid email and password login - Device Compatibility Variation 477,"1. Navigate to app.vwo.com
+2. Enter valid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Device Compatibility condition.",User successfully logs in and is redirected to dashboard (System handles condition gracefully),Medium
+TC_478,Performance,Verify page load speed on slow connection - Boundary Value Variation 478,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Boundary Value condition.",Core assets load efficiently (System handles condition gracefully),Low
+TC_479,Performance,Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 479,"1. Inspect network tab
+Note: Test specifically for Device Compatibility condition.",JS/CSS files are minified and compressed (System handles condition gracefully),Medium
+TC_480,Security & Compliance,Verify rate limiting on failed attempts - Localization Variation 480,"1. Submit incorrect password 10 times
+Note: Test specifically for Localization condition.",Account temporarily locked or rate limited (System handles condition gracefully),High
+TC_481,Accessibility,Verify high contrast mode readability - Browser Compatibility Variation 481,"1. Enable high contrast mode
+Note: Test specifically for Browser Compatibility condition.",Text and fields remain clearly distinguishable (System handles condition gracefully),Medium
+TC_482,Authentication System,Verify session timeout after inactivity - Negative Variation 482,"1. Login successfully
+2. Remain inactive for timeout period
+3. Attempt to navigate
+Note: Test specifically for Negative condition.",User is logged out and redirected to login page (System handles condition gracefully),Low
+TC_483,Authentication System,Verify login via SSO - Localization Variation 483,"1. Navigate to login
+2. Click 'Login with SSO'
+3. Complete SSO flow
+Note: Test specifically for Localization condition.",User successfully logs in via SSO (System handles condition gracefully),Low
+TC_484,Authentication System,Verify MFA prompt after password - Device Compatibility Variation 484,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Device Compatibility condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),Low
+TC_485,Integration & Third-Party,Verify Analytics event on login success - Localization Variation 485,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Localization condition.",Analytics tracking event sent for successful login (System handles condition gracefully),High
+TC_486,User Input Validation,Verify auto-focus on email field - Browser Compatibility Variation 486,"1. Open app.vwo.com login page
+Note: Test specifically for Browser Compatibility condition.",Email field is focused automatically (System handles condition gracefully),Low
+TC_487,User Experience (UX),Verify loading state during authentication - Browser Compatibility Variation 487,"1. Enter credentials and click Login
+Note: Test specifically for Browser Compatibility condition.",Button shows loading spinner while processing (System handles condition gracefully),Medium
+TC_488,User Input Validation,Verify auto-focus on email field - Negative Variation 488,"1. Open app.vwo.com login page
+Note: Test specifically for Negative condition.",Email field is focused automatically (System handles condition gracefully),Medium
+TC_489,Performance,Verify page load speed on slow connection - Edge Case Variation 489,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
+TC_490,Integration & Third-Party,Verify Analytics event on login success - Edge Case Variation 490,"1. Login successfully
+2. Check network requests
+Note: Test specifically for Edge Case condition.",Analytics tracking event sent for successful login (System handles condition gracefully),High
+TC_491,User Experience (UX),Verify responsive design on mobile viewport - Negative Variation 491,"1. Resize window to mobile width
+Note: Test specifically for Negative condition.","Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",High
+TC_492,User Experience (UX),Verify login page load time - Localization Variation 492,"1. Open login page
+Note: Test specifically for Localization condition.",Page loads within 2 seconds (System handles condition gracefully),Low
+TC_493,Authentication System,Verify invalid email and valid password login - Boundary Value Variation 493,"1. Navigate to app.vwo.com
+2. Enter invalid email
+3. Enter valid password
+4. Click Login
+Note: Test specifically for Boundary Value condition.",Error message 'Invalid credentials' is displayed (System handles condition gracefully),High
+TC_494,Accessibility,Verify screen reader ARIA labels - Boundary Value Variation 494,"1. Inspect fields with screen reader
+Note: Test specifically for Boundary Value condition.",Fields announce correct labels and states (System handles condition gracefully),Low
+TC_495,Accessibility,Verify screen reader ARIA labels - Localization Variation 495,"1. Inspect fields with screen reader
+Note: Test specifically for Localization condition.",Fields announce correct labels and states (System handles condition gracefully),Low
+TC_496,Performance,Verify asset optimization (minified JS/CSS) - Negative Variation 496,"1. Inspect network tab
+Note: Test specifically for Negative condition.",JS/CSS files are minified and compressed (System handles condition gracefully),High
+TC_497,Integration & Third-Party,Verify Microsoft Social Login - Negative Variation 497,"1. Click 'Sign in with Microsoft'
+2. Authenticate
+Note: Test specifically for Negative condition.",Logs in via Microsoft account (System handles condition gracefully),Low
+TC_498,Performance,Verify page load speed on slow connection - Negative Variation 498,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Negative condition.",Core assets load efficiently (System handles condition gracefully),Medium
+TC_499,Authentication System,Verify MFA prompt after password - Negative Variation 499,"1. Navigate to login
+2. Enter valid credentials
+3. Click Login
+Note: Test specifically for Negative condition.",MFA verification screen is displayed if enabled (System handles condition gracefully),High
+TC_500,Performance,Verify page load speed on slow connection - Edge Case Variation 500,"1. Throttle connection to 3G
+2. Load page
+Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High

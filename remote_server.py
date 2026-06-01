@@ -1,11 +1,15 @@
-import csv
-import json
-from pathlib import Path
-from mcp.server.fastmcp import FastMCP
+import os
 
-# Initialize FastMCP server specifically for remote (SSE) usage
-mcp = FastMCP("TestCaseRemoteMCP")
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", "10000"))
 
+    print(f"Starting MCP Server on port {port}")
+
+    mcp.run(
+        transport="sse",
+        host="0.0.0.0",
+        port=port
+    )
 # Global variable to store test cases
 TEST_CASES = []
 

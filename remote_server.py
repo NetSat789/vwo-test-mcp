@@ -42,13 +42,6 @@ def search_by_priority(priority: str) -> str:
     return json.dumps(results, indent=2)
 
 @mcp.tool()
-def search_by_metadata(module_name: str) -> str:
-    """Search test cases by metadata (Module name). Example: 'Authentication System'."""
-    load_test_cases()
-    results = [tc for tc in TEST_CASES if module_name.lower() in tc.get('Module', '').lower()]
-    return json.dumps(results, indent=2)
-
-@mcp.tool()
 def get_test_case_by_id(test_case_id: str) -> str:
     """Get a specific test case by its ID. Example: 'TC_001'."""
     load_test_cases()
@@ -57,7 +50,13 @@ def get_test_case_by_id(test_case_id: str) -> str:
 
 @mcp.tool()
 def list_test_cases(limit: int = 50, offset: int = 0) -> str:
-    """List test cases with pagination. Specify limit and offset."""
+    """
+    List test cases with pagination. Specify limit and offset.
+    
+    Args:
+        limit: Number of test cases to return (default: 50)
+        offset: The starting index for pagination (default: 0)
+    """
     load_test_cases()
     results = TEST_CASES[offset : offset + limit]
     return json.dumps(results, indent=2)

@@ -55,6 +55,20 @@ def get_test_case_by_id(test_case_id: str) -> str:
     results = [tc for tc in TEST_CASES if tc.get('Test Case ID', '').lower() == test_case_id.lower()]
     return json.dumps(results[0] if results else {"error": "Not found"}, indent=2)
 
+@mcp.tool()
+def list_test_cases(limit: int = 50, offset: int = 0) -> str:
+    """List test cases with pagination. Specify limit and offset."""
+    load_test_cases()
+    results = TEST_CASES[offset : offset + limit]
+    return json.dumps(results, indent=2)
+
+@mcp.tool()
+def search_by_module(module: str) -> str:
+    """Search test cases strictly by Module name."""
+    load_test_cases()
+    results = [tc for tc in TEST_CASES if module.lower() in tc.get('Module', '').lower()]
+    return json.dumps(results, indent=2)
+
 
 # Extract the Starlette ASGI web application
 app = mcp.sse_app()

@@ -4,6 +4,7 @@ import json
 import uvicorn
 from pathlib import Path
 from mcp.server.fastmcp import FastMCP
+from pydantic import Field
 
 # Initialize FastMCP server specifically for remote (SSE) usage
 mcp = FastMCP("TestCaseRemoteMCP")
@@ -49,14 +50,11 @@ def get_test_case_by_id(test_case_id: str) -> str:
     return json.dumps(results[0] if results else {"error": "Not found"}, indent=2)
 
 @mcp.tool()
-def list_test_cases(limit: int = 50, offset: int = 0) -> str:
-    """
-    List test cases with pagination. Specify limit and offset.
-    
-    Args:
-        limit: Number of test cases to return (default: 50)
-        offset: The starting index for pagination (default: 0)
-    """
+def list_test_cases(
+    limit: int = Field(50, description="Number of test cases to return"), 
+    offset: int = Field(0, description="The starting index for pagination")
+) -> str:
+    """List test cases with pagination."""
     load_test_cases()
     results = TEST_CASES[offset : offset + limit]
     return json.dumps(results, indent=2)

@@ -65,4 +65,4 @@ if __name__ == "__main__":
     print(f"Starting Remote MCP Server via SSE on port {port}...")
     
     # Run the server using uvicorn so we can specify the exact host and port
-    uvicorn.run(app, host="0.0.0.0", port=port)
+    uvicorn.run(app, host="0.0.0.0", port=port, proxy_headers=True, forwarded_allow_ips="*")

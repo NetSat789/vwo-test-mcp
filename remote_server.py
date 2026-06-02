@@ -1,15 +1,13 @@
 import os
+import csv
+import json
+import uvicorn
+from pathlib import Path
+from mcp.server.fastmcp import FastMCP
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", "10000"))
+# Initialize FastMCP server specifically for remote (SSE) usage
+mcp = FastMCP("TestCaseRemoteMCP")
 
-    print(f"Starting MCP Server on port {port}")
-
-    mcp.run(
-        transport="sse",
-        host="0.0.0.0",
-        port=port
-    )
 # Global variable to store test cases
 TEST_CASES = []
 
@@ -57,8 +55,14 @@ def get_test_case_by_id(test_case_id: str) -> str:
     results = [tc for tc in TEST_CASES if tc.get('Test Case ID', '').lower() == test_case_id.lower()]
     return json.dumps(results[0] if results else {"error": "Not found"}, indent=2)
 
+
+# Extract the Starlette ASGI web application
+app = mcp.sse_app()
+
 if __name__ == "__main__":
-    # Start the server using SSE (Server-Sent Events) for remote web connections
-    # This will host the server on http://localhost:8000
-    print("Starting Remote MCP Server via SSE on port 8000...")
-    mcp.run(transport="sse")
+    # Render assigns a dynamic PORT environment variable. We use 8000 as a fallback.
+    port = int(os.environ.get("PORT", 8000))
+    print(f"Starting Remote MCP Server via SSE on port {port}...")
+    
+    # Run the server using uvicorn so we can specify the exact host and port
+    uvicorn.run(app, host="0.0.0.0", port=port)

@@ -1,0 +1,526 @@
+{
+  "module": "Performance",
+  "total_count": 65,
+  "test_cases": [
+    {
+      "Test Case ID": "TC_024",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page",
+      "Expected Result": "Core assets load efficiently",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_025",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS)",
+      "Test Steps": "1. Inspect network tab",
+      "Expected Result": "JS/CSS files are minified and compressed",
+      "Priority": "Critical"
+    },
+    {
+      "Test Case ID": "TC_032",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 32",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_036",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 36",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_041",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 41",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_051",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 51",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_065",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 65",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_066",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 66",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_076",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 76",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_100",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Localization Variation 100",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Localization condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_108",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Boundary Value Variation 108",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_109",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 109",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_110",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 110",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_113",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 113",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_125",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Device Compatibility Variation 125",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_129",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 129",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_138",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 138",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_141",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Boundary Value Variation 141",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_143",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 143",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_144",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 144",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_148",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Boundary Value Variation 148",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_151",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Browser Compatibility Variation 151",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_169",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 169",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_172",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 172",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_173",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Device Compatibility Variation 173",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_183",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 183",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_186",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 186",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_196",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Device Compatibility Variation 196",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_198",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 198",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_200",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Browser Compatibility Variation 200",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_206",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 206",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_207",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 207",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_214",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 214",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_216",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 216",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_222",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 222",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_234",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Device Compatibility Variation 234",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_252",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Localization Variation 252",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Localization condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_253",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 253",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_259",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 259",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_267",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 267",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_268",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Localization Variation 268",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Localization condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_286",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 286",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_291",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 291",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_293",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 293",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_302",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 302",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_319",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Boundary Value Variation 319",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_328",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 328",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_340",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 340",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_344",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 344",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_364",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 364",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_366",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 366",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_372",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 372",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_373",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 373",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_412",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 412",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_413",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 413",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_420",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 420",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_421",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Device Compatibility Variation 421",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_433",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 433",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_447",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 447",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_478",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 478",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_479",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 479",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_489",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 489",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_496",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Negative Variation 496",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Negative condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "High"
+    },
+    {
+      "Test Case ID": "TC_498",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 498",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Medium"
+    },
+    {
+      "Test Case ID": "TC_500",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 500",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "High"
+    }
+  ]
+}

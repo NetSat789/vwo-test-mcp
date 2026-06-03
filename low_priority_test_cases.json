@@ -1,0 +1,1215 @@
+{
+  "priority": "Low",
+  "total_count": 151,
+  "server": "https://vwo-test-mcp.onrender.com/sse",
+  "test_cases": [
+    {
+      "Test Case ID": "TC_029",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify valid email and password login - Device Compatibility Variation 29",
+      "Test Steps": "1. Navigate to app.vwo.com\n2. Enter valid email\n3. Enter valid password\n4. Click Login\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "User successfully logs in and is redirected to dashboard (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_031",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify screen reader ARIA labels - Boundary Value Variation 31",
+      "Test Steps": "1. Inspect fields with screen reader\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Fields announce correct labels and states (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_032",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 32",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_033",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify HTTPS enforcement - Localization Variation 33",
+      "Test Steps": "1. Attempt to access via http://\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Redirects to https:// (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_034",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Negative Variation 34",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_035",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify XSS protection on input fields - Negative Variation 35",
+      "Test Steps": "1. Enter <script>alert(1)</script> in email\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Input is sanitized, script does not execute (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_039",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Device Compatibility Variation 39",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_043",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Negative Variation 43",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_044",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify keyboard navigation (Tab key) - Edge Case Variation 44",
+      "Test Steps": "1. Use Tab key to navigate fields\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Focus moves logically across inputs and buttons (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_048",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify no sensitive data in URL - Device Compatibility Variation 48",
+      "Test Steps": "1. Perform login\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "URL does not contain password or tokens (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_051",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 51",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_052",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Edge Case Variation 52",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_057",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Edge Case Variation 57",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_064",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Localization Variation 64",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_066",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Negative Variation 66",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_068",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Device Compatibility Variation 68",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_069",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify email format validation (missing @) - Device Compatibility Variation 69",
+      "Test Steps": "1. Enter email without @ symbol\n2. Click outside field\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Validation error 'Invalid email format' is shown immediately (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_071",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password complexity requirements - Negative Variation 71",
+      "Test Steps": "1. Attempt to set password without numbers/specials\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Error indicating complexity requirements (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_076",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Edge Case Variation 76",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_077",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify responsive design on mobile viewport - Edge Case Variation 77",
+      "Test Steps": "1. Resize window to mobile width\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_078",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify Light/Dark mode toggle - Localization Variation 78",
+      "Test Steps": "1. Click theme toggle\nNote: Test specifically for Localization condition.",
+      "Expected Result": "UI switches between light and dark themes (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_102",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Device Compatibility Variation 102",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_103",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify responsive design on mobile viewport - Localization Variation 103",
+      "Test Steps": "1. Resize window to mobile width\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_116",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Localization Variation 116",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_117",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Device Compatibility Variation 117",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_123",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Browser Compatibility Variation 123",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_126",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Negative Variation 126",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_128",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Boundary Value Variation 128",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_129",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 129",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_132",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify keyboard navigation (Tab key) - Negative Variation 132",
+      "Test Steps": "1. Use Tab key to navigate fields\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Focus moves logically across inputs and buttons (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_133",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify login via SSO - Negative Variation 133",
+      "Test Steps": "1. Navigate to login\n2. Click 'Login with SSO'\n3. Complete SSO flow\nNote: Test specifically for Negative condition.",
+      "Expected Result": "User successfully logs in via SSO (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_134",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify MFA prompt after password - Device Compatibility Variation 134",
+      "Test Steps": "1. Navigate to login\n2. Enter valid credentials\n3. Click Login\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "MFA verification screen is displayed if enabled (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_135",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Browser Compatibility Variation 135",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_136",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Localization Variation 136",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_138",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 138",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_143",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Edge Case Variation 143",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_146",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Negative Variation 146",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_147",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify XSS protection on input fields - Edge Case Variation 147",
+      "Test Steps": "1. Enter <script>alert(1)</script> in email\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Input is sanitized, script does not execute (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_150",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Boundary Value Variation 150",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_152",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Boundary Value Variation 152",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_154",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Boundary Value Variation 154",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_156",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Device Compatibility Variation 156",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_163",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify loading state during authentication - Boundary Value Variation 163",
+      "Test Steps": "1. Enter credentials and click Login\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Button shows loading spinner while processing (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_165",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Negative Variation 165",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_167",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify login via SSO - Edge Case Variation 167",
+      "Test Steps": "1. Navigate to login\n2. Click 'Login with SSO'\n3. Complete SSO flow\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "User successfully logs in via SSO (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_174",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify valid email and password login - Negative Variation 174",
+      "Test Steps": "1. Navigate to app.vwo.com\n2. Enter valid email\n3. Enter valid password\n4. Click Login\nNote: Test specifically for Negative condition.",
+      "Expected Result": "User successfully logs in and is redirected to dashboard (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_176",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Google Social Login - Browser Compatibility Variation 176",
+      "Test Steps": "1. Click 'Sign in with Google'\n2. Authenticate\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Logs in via Google account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_178",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Localization Variation 178",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_180",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Boundary Value Variation 180",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_189",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Localization Variation 189",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_190",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Localization Variation 190",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_191",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Localization Variation 191",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_193",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password complexity requirements - Browser Compatibility Variation 193",
+      "Test Steps": "1. Attempt to set password without numbers/specials\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Error indicating complexity requirements (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_201",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Edge Case Variation 201",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_211",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify valid email and password login - Boundary Value Variation 211",
+      "Test Steps": "1. Navigate to app.vwo.com\n2. Enter valid email\n3. Enter valid password\n4. Click Login\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "User successfully logs in and is redirected to dashboard (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_213",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Device Compatibility Variation 213",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_216",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 216",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_220",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify loading state during authentication - Negative Variation 220",
+      "Test Steps": "1. Enter credentials and click Login\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Button shows loading spinner while processing (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_221",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Device Compatibility Variation 221",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_225",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify screen reader ARIA labels - Boundary Value Variation 225",
+      "Test Steps": "1. Inspect fields with screen reader\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Fields announce correct labels and states (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_228",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify auto-focus on email field - Negative Variation 228",
+      "Test Steps": "1. Open app.vwo.com login page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Email field is focused automatically (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_229",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify XSS protection on input fields - Browser Compatibility Variation 229",
+      "Test Steps": "1. Enter <script>alert(1)</script> in email\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Input is sanitized, script does not execute (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_233",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Device Compatibility Variation 233",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_235",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Browser Compatibility Variation 235",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_238",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify screen reader ARIA labels - Edge Case Variation 238",
+      "Test Steps": "1. Inspect fields with screen reader\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Fields announce correct labels and states (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_240",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Boundary Value Variation 240",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_242",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Edge Case Variation 242",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_247",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Browser Compatibility Variation 247",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_251",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify loading state during authentication - Browser Compatibility Variation 251",
+      "Test Steps": "1. Enter credentials and click Login\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Button shows loading spinner while processing (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_255",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Browser Compatibility Variation 255",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_256",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Browser Compatibility Variation 256",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_268",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Localization Variation 268",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Localization condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_269",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify Light/Dark mode toggle - Edge Case Variation 269",
+      "Test Steps": "1. Click theme toggle\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "UI switches between light and dark themes (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_273",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify MFA prompt after password - Localization Variation 273",
+      "Test Steps": "1. Navigate to login\n2. Enter valid credentials\n3. Click Login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "MFA verification screen is displayed if enabled (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_277",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify XSS protection on input fields - Boundary Value Variation 277",
+      "Test Steps": "1. Enter <script>alert(1)</script> in email\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Input is sanitized, script does not execute (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_279",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify auto-focus on email field - Edge Case Variation 279",
+      "Test Steps": "1. Open app.vwo.com login page\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Email field is focused automatically (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_281",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Localization Variation 281",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_284",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Boundary Value Variation 284",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_286",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 286",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_289",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify loading state during authentication - Localization Variation 289",
+      "Test Steps": "1. Enter credentials and click Login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Button shows loading spinner while processing (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_290",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Browser Compatibility Variation 290",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_293",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 293",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_295",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Edge Case Variation 295",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_298",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Device Compatibility Variation 298",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_300",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Boundary Value Variation 300",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_301",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify HTTPS enforcement - Boundary Value Variation 301",
+      "Test Steps": "1. Attempt to access via http://\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Redirects to https:// (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_304",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify no sensitive data in URL - Browser Compatibility Variation 304",
+      "Test Steps": "1. Perform login\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "URL does not contain password or tokens (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_305",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Negative Variation 305",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_309",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password complexity requirements - Device Compatibility Variation 309",
+      "Test Steps": "1. Attempt to set password without numbers/specials\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Error indicating complexity requirements (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_314",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Negative Variation 314",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_316",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Browser Compatibility Variation 316",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_321",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Edge Case Variation 321",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_328",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Browser Compatibility Variation 328",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_334",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password complexity requirements - Localization Variation 334",
+      "Test Steps": "1. Attempt to set password without numbers/specials\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Error indicating complexity requirements (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_337",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify required fields validation - Device Compatibility Variation 337",
+      "Test Steps": "1. Leave fields empty\n2. Click Login\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Error messages shown for required fields (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_340",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 340",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_342",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Negative Variation 342",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_345",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify auto-focus on email field - Negative Variation 345",
+      "Test Steps": "1. Open app.vwo.com login page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Email field is focused automatically (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_349",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Google Social Login - Boundary Value Variation 349",
+      "Test Steps": "1. Click 'Sign in with Google'\n2. Authenticate\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Logs in via Google account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_352",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Browser Compatibility Variation 352",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_354",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Device Compatibility Variation 354",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_357",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify valid email and password login - Negative Variation 357",
+      "Test Steps": "1. Navigate to app.vwo.com\n2. Enter valid email\n3. Enter valid password\n4. Click Login\nNote: Test specifically for Negative condition.",
+      "Expected Result": "User successfully logs in and is redirected to dashboard (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_361",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Browser Compatibility Variation 361",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_362",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Device Compatibility Variation 362",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_365",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Browser Compatibility Variation 365",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_366",
+      "Module": "Performance",
+      "Test Case Description": "Verify asset optimization (minified JS/CSS) - Device Compatibility Variation 366",
+      "Test Steps": "1. Inspect network tab\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "JS/CSS files are minified and compressed (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_367",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify auto-focus on email field - Negative Variation 367",
+      "Test Steps": "1. Open app.vwo.com login page\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Email field is focused automatically (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_375",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify keyboard navigation (Tab key) - Localization Variation 375",
+      "Test Steps": "1. Use Tab key to navigate fields\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Focus moves logically across inputs and buttons (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_378",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Device Compatibility Variation 378",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_382",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Boundary Value Variation 382",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_384",
+      "Module": "Password Management",
+      "Test Case Description": "Verify 'Forgot Password' link navigation - Boundary Value Variation 384",
+      "Test Steps": "1. Click 'Forgot Password'\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Navigates to password reset page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_386",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify Light/Dark mode toggle - Localization Variation 386",
+      "Test Steps": "1. Click theme toggle\nNote: Test specifically for Localization condition.",
+      "Expected Result": "UI switches between light and dark themes (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_389",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify no sensitive data in URL - Localization Variation 389",
+      "Test Steps": "1. Perform login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "URL does not contain password or tokens (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_397",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify valid email and password login - Negative Variation 397",
+      "Test Steps": "1. Navigate to app.vwo.com\n2. Enter valid email\n3. Enter valid password\n4. Click Login\nNote: Test specifically for Negative condition.",
+      "Expected Result": "User successfully logs in and is redirected to dashboard (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_398",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password complexity requirements - Negative Variation 398",
+      "Test Steps": "1. Attempt to set password without numbers/specials\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Error indicating complexity requirements (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_400",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Edge Case Variation 400",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_401",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Boundary Value Variation 401",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_405",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Browser Compatibility Variation 405",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_406",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Boundary Value Variation 406",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_408",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify responsive design on mobile viewport - Boundary Value Variation 408",
+      "Test Steps": "1. Resize window to mobile width\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_412",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 412",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_415",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify HTTPS enforcement - Boundary Value Variation 415",
+      "Test Steps": "1. Attempt to access via http://\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Redirects to https:// (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_417",
+      "Module": "Password Management",
+      "Test Case Description": "Verify password reset token generation - Browser Compatibility Variation 417",
+      "Test Steps": "1. Enter valid email for reset\n2. Submit\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Reset link sent to email with secure token (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_419",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify HTTPS enforcement - Negative Variation 419",
+      "Test Steps": "1. Attempt to access via http://\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Redirects to https:// (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_420",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Localization Variation 420",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_423",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify no sensitive data in URL - Negative Variation 423",
+      "Test Steps": "1. Perform login\nNote: Test specifically for Negative condition.",
+      "Expected Result": "URL does not contain password or tokens (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_429",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify keyboard navigation (Tab key) - Negative Variation 429",
+      "Test Steps": "1. Use Tab key to navigate fields\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Focus moves logically across inputs and buttons (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_434",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify email format validation (missing @) - Browser Compatibility Variation 434",
+      "Test Steps": "1. Enter email without @ symbol\n2. Click outside field\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Validation error 'Invalid email format' is shown immediately (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_435",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Device Compatibility Variation 435",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_441",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify responsive design on mobile viewport - Edge Case Variation 441",
+      "Test Steps": "1. Resize window to mobile width\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Layout adjusts correctly, touch targets are appropriate (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_442",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify HTTPS enforcement - Negative Variation 442",
+      "Test Steps": "1. Attempt to access via http://\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Redirects to https:// (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_445",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify high contrast mode readability - Browser Compatibility Variation 445",
+      "Test Steps": "1. Enable high contrast mode\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Text and fields remain clearly distinguishable (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_446",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify required fields validation - Localization Variation 446",
+      "Test Steps": "1. Leave fields empty\n2. Click Login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Error messages shown for required fields (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_449",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify MFA prompt after password - Localization Variation 449",
+      "Test Steps": "1. Navigate to login\n2. Enter valid credentials\n3. Click Login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "MFA verification screen is displayed if enabled (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_450",
+      "Module": "Security & Compliance",
+      "Test Case Description": "Verify rate limiting on failed attempts - Negative Variation 450",
+      "Test Steps": "1. Submit incorrect password 10 times\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Account temporarily locked or rate limited (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_453",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify email format validation (missing @) - Browser Compatibility Variation 453",
+      "Test Steps": "1. Enter email without @ symbol\n2. Click outside field\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Validation error 'Invalid email format' is shown immediately (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_460",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify keyboard navigation (Tab key) - Device Compatibility Variation 460",
+      "Test Steps": "1. Use Tab key to navigate fields\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Focus moves logically across inputs and buttons (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_461",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify MFA prompt after password - Localization Variation 461",
+      "Test Steps": "1. Navigate to login\n2. Enter valid credentials\n3. Click Login\nNote: Test specifically for Localization condition.",
+      "Expected Result": "MFA verification screen is displayed if enabled (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_467",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Analytics event on login success - Device Compatibility Variation 467",
+      "Test Steps": "1. Login successfully\n2. Check network requests\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "Analytics tracking event sent for successful login (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_469",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify email format validation (missing @) - Browser Compatibility Variation 469",
+      "Test Steps": "1. Enter email without @ symbol\n2. Click outside field\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Validation error 'Invalid email format' is shown immediately (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_470",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Google Social Login - Edge Case Variation 470",
+      "Test Steps": "1. Click 'Sign in with Google'\n2. Authenticate\nNote: Test specifically for Edge Case condition.",
+      "Expected Result": "Logs in via Google account (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_475",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify password strength indicator - Negative Variation 475",
+      "Test Steps": "1. Type weak password in new password field\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Strength indicator shows 'Weak' (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_478",
+      "Module": "Performance",
+      "Test Case Description": "Verify page load speed on slow connection - Boundary Value Variation 478",
+      "Test Steps": "1. Throttle connection to 3G\n2. Load page\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Core assets load efficiently (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_482",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify session timeout after inactivity - Negative Variation 482",
+      "Test Steps": "1. Login successfully\n2. Remain inactive for timeout period\n3. Attempt to navigate\nNote: Test specifically for Negative condition.",
+      "Expected Result": "User is logged out and redirected to login page (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_483",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify login via SSO - Localization Variation 483",
+      "Test Steps": "1. Navigate to login\n2. Click 'Login with SSO'\n3. Complete SSO flow\nNote: Test specifically for Localization condition.",
+      "Expected Result": "User successfully logs in via SSO (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_484",
+      "Module": "Authentication System",
+      "Test Case Description": "Verify MFA prompt after password - Device Compatibility Variation 484",
+      "Test Steps": "1. Navigate to login\n2. Enter valid credentials\n3. Click Login\nNote: Test specifically for Device Compatibility condition.",
+      "Expected Result": "MFA verification screen is displayed if enabled (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_486",
+      "Module": "User Input Validation",
+      "Test Case Description": "Verify auto-focus on email field - Browser Compatibility Variation 486",
+      "Test Steps": "1. Open app.vwo.com login page\nNote: Test specifically for Browser Compatibility condition.",
+      "Expected Result": "Email field is focused automatically (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_492",
+      "Module": "User Experience (UX)",
+      "Test Case Description": "Verify login page load time - Localization Variation 492",
+      "Test Steps": "1. Open login page\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Page loads within 2 seconds (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_494",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify screen reader ARIA labels - Boundary Value Variation 494",
+      "Test Steps": "1. Inspect fields with screen reader\nNote: Test specifically for Boundary Value condition.",
+      "Expected Result": "Fields announce correct labels and states (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_495",
+      "Module": "Accessibility",
+      "Test Case Description": "Verify screen reader ARIA labels - Localization Variation 495",
+      "Test Steps": "1. Inspect fields with screen reader\nNote: Test specifically for Localization condition.",
+      "Expected Result": "Fields announce correct labels and states (System handles condition gracefully)",
+      "Priority": "Low"
+    },
+    {
+      "Test Case ID": "TC_497",
+      "Module": "Integration & Third-Party",
+      "Test Case Description": "Verify Microsoft Social Login - Negative Variation 497",
+      "Test Steps": "1. Click 'Sign in with Microsoft'\n2. Authenticate\nNote: Test specifically for Negative condition.",
+      "Expected Result": "Logs in via Microsoft account (System handles condition gracefully)",
+      "Priority": "Low"
+    }
+  ]
+}

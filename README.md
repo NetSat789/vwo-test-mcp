@@ -2,43 +2,13 @@
 
 A **remote MCP (Model Context Protocol) server** deployed on [Render](https://render.com) that exposes **500 VWO Login Page test cases** to any AI coding assistant (Claude, Cline, Antigravity, etc.) via a simple config.
 
-**Live Server:** `https://vwo-test-mcp.onrender.com/sse`
-
----
-
-## 🚀 Quick Connect (Any System)
-
-Add this to your MCP client config. Works on **Windows, macOS, and Linux** — only requires [Node.js](https://nodejs.org) to be installed.
-
-```json
-{
-  "mcpServers": {
-    "vwo-test-cases": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "supergateway",
-        "--sse",
-        "https://vwo-test-mcp.onrender.com/sse"
-      ]
-    }
-  }
-}
-```
-
-> `npx -y` auto-downloads `supergateway` on first run — no installation step needed.
-
-### Config file locations
-
-| Client | Config File Path |
-|---|---|
-| **Antigravity** | `C:\Users\<username>\.gemini\antigravity\mcp_config.json` |
-| **Cline (VS Code)** | `C:\Users\<username>\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json` |
-| **Claude Desktop** | `C:\Users\<username>\AppData\Roaming\Claude\claude_desktop_config.json` |
+> ⚠️ **Private Project** — Server URL and connection details are shared privately. Contact the repo owner to get access.
 
 ---
 
 ## 🛠️ Available Tools
+
+Once connected, the following MCP tools are available:
 
 | Tool | Description | Parameters |
 |---|---|---|
@@ -80,7 +50,7 @@ AI Client (Cline / Antigravity / Claude)
         │
         │  HTTPS / SSE
         ▼
-  Render Cloud (vwo-test-mcp)  ← FastMCP + Uvicorn
+  Render Cloud                 ← FastMCP + Uvicorn
         │
         │  reads
         ▼
@@ -96,16 +66,19 @@ AI Client (Cline / Antigravity / Claude)
 | MCP Framework | [FastMCP](https://github.com/jlowin/fastmcp) (`mcp[cli] >= 1.0.0`) |
 | Web Server | Uvicorn + Starlette (ASGI) |
 | Transport | SSE (Server-Sent Events) |
-| Hosting | [Render](https://render.com) (free tier) |
+| Hosting | [Render](https://render.com) |
 | Data | CSV — 500 VWO login test cases |
 
 ---
 
 ## ⚙️ Server Setup (for self-hosting)
 
+If you want to run your own instance:
+
 ### Prerequisites
 - Python 3.10+
 - A [Render](https://render.com) account (or any cloud that runs Python)
+- Node.js (for the `npx supergateway` client connector)
 
 ### Local Development
 
@@ -118,6 +91,26 @@ python remote_server.py
 
 Server runs at `http://localhost:8000/sse`.
 
+### Connecting a Client to Your Local Instance
+
+Add this to your MCP client config (pointing to localhost):
+
+```json
+{
+  "mcpServers": {
+    "vwo-test-cases": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "supergateway",
+        "--sse",
+        "http://localhost:8000/sse"
+      ]
+    }
+  }
+}
+```
+
 ### Deploy on Render
 
 1. Fork this repo.
@@ -126,12 +119,13 @@ Server runs at `http://localhost:8000/sse`.
    - **Build Command:** `pip install -r requirements.txt`
    - **Start Command:** `python remote_server.py`
 4. Render auto-assigns the `PORT` environment variable — the server reads it automatically.
+5. Use your own Render URL in the client config above.
 
 ---
 
 ## 📋 Test Case Dataset
 
-The dataset (`vwo_login_test_cases.csv`) contains **500 test cases** for the [VWO Login page](https://app.vwo.com) covering:
+The dataset (`vwo_login_test_cases.csv`) contains **500 test cases** for the VWO Login page covering:
 
 | Module | Priority Levels |
 |---|---|
@@ -149,13 +143,13 @@ The dataset (`vwo_login_test_cases.csv`) contains **500 test cases** for the [VW
 ## 🐛 Troubleshooting
 
 ### `Method Not Allowed` error
-This happens when the MCP client does not correctly handle SSE relative URLs. The `supergateway` config above fixes this completely for all clients.
+This happens when the MCP client does not correctly handle SSE relative URLs. Using `npx supergateway` as the client connector fixes this completely.
 
-**Root cause:** Some older MCP clients (certain versions of Cline, Antigravity) had a bug where they ignored the SSE `endpoint` event and sent `POST` requests directly to `/sse` (which only accepts `GET`).
+**Root cause:** Some older MCP clients had a bug where they ignored the SSE `endpoint` event and sent `POST` requests directly to `/sse` (which only accepts `GET`).
 
-**Fix applied to server:** A `RootPathMiddleware` was added to `remote_server.py` that forces the server to emit **absolute URLs** in the SSE endpoint event (e.g. `https://vwo-test-mcp.onrender.com/messages/?session_id=...` instead of just `/messages/?session_id=...`). This makes the server compatible with both buggy and compliant clients.
+**Fix applied to server:** A `RootPathMiddleware` was added that forces the server to emit **absolute URLs** in the SSE endpoint event. This makes the server compatible with both buggy and compliant clients.
 
-### Render cold start delay
+### Slow first connection
 Render free tier spins down after inactivity. The first connection may take **30–60 seconds** while the server wakes up. Subsequent requests are fast.
 
 ### `npx` not found
@@ -166,8 +160,8 @@ Install [Node.js](https://nodejs.org/en/download) — `npx` is bundled with it.
 ## 📅 Changelog
 
 ### 2026-06-03
-- **Fixed universal client compatibility** — replaced hardcoded Python proxy script with `npx supergateway` command. Now works on any OS with a single config snippet.
-- **Fixed `Method Not Allowed` error** — added `RootPathMiddleware` and URL encoding patch to `remote_server.py` so the server emits absolute SSE endpoint URLs, fixing compatibility with older buggy MCP clients.
+- **Fixed universal client compatibility** — replaced hardcoded Python proxy script with `npx supergateway`. Now works on any OS with Node.js installed.
+- **Fixed `Method Not Allowed` error** — added `RootPathMiddleware` and URL encoding patch to emit absolute SSE endpoint URLs.
 - **Added `RootPathMiddleware`** — reads `X-Forwarded-Proto` and `Host` headers from Render/Cloudflare to construct correct absolute callback URLs.
 - **Added CORS middleware** — allows connections from any origin.
 

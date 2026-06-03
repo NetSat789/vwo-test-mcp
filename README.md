@@ -91,26 +91,6 @@ python remote_server.py
 
 Server runs at `http://localhost:8000/sse`.
 
-### Connecting a Client to Your Local Instance
-
-Add this to your MCP client config (pointing to localhost):
-
-```json
-{
-  "mcpServers": {
-    "vwo-test-cases": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "supergateway",
-        "--sse",
-        "http://localhost:8000/sse"
-      ]
-    }
-  }
-}
-```
-
 ### Deploy on Render
 
 1. Fork this repo.

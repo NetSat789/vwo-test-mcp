@@ -6,35 +6,6 @@ A **remote MCP (Model Context Protocol) server** deployed on [Render](https://re
 
 ---
 
-## 🔌 Client Configuration
-
-Once you have the server URL, use the config below for your client. The config is identical for all clients — only the file path differs.
-
-> Replace `YOUR_SERVER_URL` with the actual server URL shared by the repo owner.
-
-| Client | Config File Path |
-|---|---|
-| **Cline (VS Code)** | `C:\Users\<username>\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json` |
-| **Antigravity** | `C:\Users\<username>\.gemini\antigravity\mcp_config.json` |
-| **Claude Desktop** | `C:\Users\<username>\AppData\Roaming\Claude\claude_desktop_config.json` |
-
-**Paste this into your config file:**
-
-```json
-{
-  "mcpServers": {
-    "vwo-test-cases": {
-      "command": "npx",
-      "args": ["-y", "supergateway", "--sse", "YOUR_SERVER_URL"]
-    }
-  }
-}
-```
-
-> **Requirement:** [Node.js](https://nodejs.org) must be installed. `npx` auto-downloads `supergateway` on first run — no extra install needed.
-
----
-
 ## 🛠️ Available Tools
 
 Once connected, the following MCP tools are available:

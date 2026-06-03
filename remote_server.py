@@ -72,8 +72,35 @@ def search_by_module(module: str) -> str:
 
 from starlette.middleware.cors import CORSMiddleware
 
+# --- BEGIN MONKEY PATCH FOR ABSOLUTE URLS ---
+# This fixes the "Method Not Allowed" error for MCP clients that do not support
+# relative URLs in the SSE endpoint event by forcing an absolute URL.
+import mcp.server.sse as mcp_sse
+import urllib.parse
+original_quote = urllib.parse.quote
+
+def custom_quote(string, safe='/', encoding=None, errors=None):
+    return original_quote(string, safe=safe + ':', encoding=encoding, errors=errors)
+
+mcp_sse.quote = custom_quote
+
+class RootPathMiddleware:
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] in ("http", "websocket"):
+            headers = dict(scope.get("headers", []))
+            host = headers.get(b"host", b"").decode("utf-8")
+            proto = headers.get(b"x-forwarded-proto", b"http").decode("utf-8")
+            if host:
+                scope["root_path"] = f"{proto}://{host}"
+        await self.app(scope, receive, send)
+# --- END MONKEY PATCH ---
+
 # Extract the Starlette ASGI web application
 app = mcp.sse_app()
+app.add_middleware(RootPathMiddleware)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],

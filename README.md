@@ -139,20 +139,20 @@ Install [Node.js](https://nodejs.org/en/download) — `npx` is bundled with it.
 
 ## 📅 Changelog
 
-### 2026-06-03
+### Phase 3 — Universal Client Compatibility
 - **Fixed universal client compatibility** — replaced hardcoded Python proxy script with `npx supergateway`. Now works on any OS with Node.js installed.
 - **Fixed `Method Not Allowed` error** — added `RootPathMiddleware` and URL encoding patch to emit absolute SSE endpoint URLs.
 - **Added `RootPathMiddleware`** — reads `X-Forwarded-Proto` and `Host` headers from Render/Cloudflare to construct correct absolute callback URLs.
 - **Added CORS middleware** — allows connections from any origin.
 
-### 2026-06-01 — 2026-06-02
+### Phase 2 — Remote Deployment
 - **Initial deployment on Render** — FastMCP server deployed with SSE transport.
 - **Added 4 MCP tools** — `list_test_cases`, `get_test_case_by_id`, `search_by_priority`, `search_by_module`.
 - **Added pagination** — `list_test_cases` supports `limit` and `offset` parameters to avoid token overload.
 - **Fixed `421 Misdirected Request`** — configured Uvicorn with `proxy_headers=True` and `forwarded_allow_ips="*"` to correctly handle Cloudflare/Render reverse proxy headers.
 - **Loaded 500 test cases** from CSV into memory at startup for fast in-memory querying.
 
-### 2026-05-27
+### Phase 1 — Dataset Generation
 - **Generated 500 VWO login test cases** from a test plan document into `vwo_login_test_cases.csv`.
 
 ---

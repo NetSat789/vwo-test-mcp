@@ -42,6 +42,9 @@ def search_by_priority(priority: str) -> str:
     results = [tc for tc in TEST_CASES if tc.get('Priority', '').lower() == priority.lower()]
     return json.dumps(results, indent=2)
 
+
+
+
 @mcp.tool()
 def get_test_case_by_id(test_case_id: str) -> str:
     """Get a specific test case by its ID. Example: 'TC_001'."""
@@ -67,8 +70,17 @@ def search_by_module(module: str) -> str:
     return json.dumps(results, indent=2)
 
 
+from starlette.middleware.cors import CORSMiddleware
+
 # Extract the Starlette ASGI web application
 app = mcp.sse_app()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 if __name__ == "__main__":
     # Render assigns a dynamic PORT environment variable. We use 8000 as a fallback.

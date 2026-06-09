@@ -21,17 +21,15 @@ def load_test_cases():
     try:
         with open(csv_path, mode='r', encoding='utf-8') as f:
             reader = csv.DictReader(f)
-            # Read all 500 test cases
-            for i, row in enumerate(reader):
-                if i >= 500:
-                    break
+            # Read all test cases
+            for row in reader:
                 TEST_CASES.append(row)
     except Exception as e:
         print(f"Error loading CSV: {e}")
 
 @mcp.resource("test-cases://all")
 def get_all_test_cases() -> str:
-    """Get all 500 loaded test cases."""
+    """Get all loaded test cases."""
     load_test_cases()
     return json.dumps(TEST_CASES, indent=2)
 

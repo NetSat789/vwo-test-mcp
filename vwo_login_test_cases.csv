@@ -1280,103 +1280,103 @@ Note: Test specifically for Negative condition.",MFA verification screen is disp
 TC_500,Performance,Verify page load speed on slow connection - Edge Case Variation 500,"1. Throttle connection to 3G
 2. Load page
 Note: Test specifically for Edge Case condition.",Core assets load efficiently (System handles condition gracefully),High
-TC_501,Authentication System,Verify login with OTP - Variation 501,"1. Enter username\n2. Enter OTP\nNote: Test specifically for OTP condition.",User successfully logs in with OTP,Low
-TC_502,Performance,Verify page load speed on 4G - Variation 502,"1. Throttle connection to 4G\n2. Load page\nNote: Test specifically for 4G condition.",Core assets load efficiently,Medium
-TC_503,Security & Compliance,Verify CSRF protection - Variation 503,"1. Submit form without CSRF token\nNote: Test specifically for CSRF condition.",Request is rejected,High
-TC_504,Integration & Third-Party,Verify Slack webhook integration - Variation 504,"1. Trigger event\n2. Check Slack channel\nNote: Test specifically for webhook condition.",Message posted to Slack,Low
-TC_505,Accessibility,Verify screen reader reading order - Variation 505,"1. Navigate page with screen reader\nNote: Test specifically for reading order.",Elements announced in correct order,Low
-TC_506,User Experience (UX),Verify tooltip display on hover - Variation 506,"1. Hover over element\nNote: Test specifically for tooltip condition.",Tooltip appears correctly,Medium
-TC_507,Password Management,Verify password reset email content - Variation 507,"1. Request password reset\nNote: Test specifically for email content.",Email contains reset link,Low
-TC_508,Authentication System,Verify login with social account - Variation 508,"1. Click 'Login with Google'\n2. Authenticate\nNote: Test specifically for social login.",User logged in via Google,Medium
-TC_509,Performance,Verify asset caching headers - Variation 509,"1. Load page\n2. Inspect response headers\nNote: Test specifically for caching.",Headers include proper cache-control,Low
-TC_510,Security & Compliance,Verify password hash storage - Variation 510,"1. Create new user\nNote: Test specifically for hash storage.",Passwords stored as hashes,High
-TC_511,Integration & Third-Party,Verify Stripe payment flow - Variation 511,"1. Initiate payment\n2. Complete checkout\nNote: Test specifically for payment.",Payment succeeds,Medium
-TC_512,Accessibility,Verify focus trap in modal - Variation 512,"1. Open modal\n2. Tab through elements\nNote: Test specifically for focus trap.",Focus stays within modal,Low
-TC_513,User Experience (UX),Verify infinite scroll loading - Variation 513,"1. Scroll to bottom\nNote: Test specifically for infinite scroll.",New items load correctly,Medium
-TC_514,Password Management,Verify password strength meter colors - Variation 514,"1. Enter weak password\n2. Observe meter\nNote: Test specifically for color change.",Meter shows red for weak,Low
-TC_515,Authentication System,Verify login after account lock - Variation 515,"1. Lock account\n2. Attempt login\nNote: Test specifically for locked account.",Login denied with lock message,High
-TC_516,Performance,Verify image lazy loading - Variation 516,"1. Load page with images below fold\nNote: Test specifically for lazy load.",Images load on scroll,Low
-TC_517,Security & Compliance,Verify XSS in comment field - Variation 517,"1. Submit <script>alert(1)</script> in comment\nNote: Test specifically for XSS.",Input sanitized,Low
-TC_518,Integration & Third-Party,Verify webhook retry logic - Variation 518,"1. Simulate webhook failure\nNote: Test specifically for retry.",Webhook retries up to 3 times,Medium
-TC_519,Accessibility,Verify keyboard shortcuts - Variation 519,"1. Press Alt+S\nNote: Test specifically for shortcut.",Shortcut triggers correct action,Low
-TC_520,User Experience (UX),Verify loading spinner disappears - Variation 520,"1. Submit form\nNote: Test specifically for spinner.",Spinner disappears after load,Low
-TC_521,Password Management,Verify password history enforcement - Variation 521,"1. Change password to previous one\nNote: Test specifically for history.",Change rejected,High
-TC_522,Authentication System,Verify account deletion flow - Variation 522,"1. Delete account\nNote: Test specifically for deletion.",Account removed permanently,Medium
-TC_523,Performance,Verify CDN cache busting - Variation 523,"1. Deploy new asset\n2. Load page\nNote: Test specifically for cache busting.",New asset served,Low
-TC_524,Security & Compliance,Verify two-factor authentication backup codes - Variation 524,"1. Use backup code for 2FA\nNote: Test specifically for backup.",Login succeeds,Medium
-TC_525,Integration & Third-Party,Verify Google Analytics event firing - Variation 525,"1. Perform action\n2. Check GA console\nNote: Test specifically for analytics.",Event recorded,Low
-TC_526,Accessibility,Verify contrast ratio for text - Variation 526,"1. Inspect CSS colors\nNote: Test specifically for contrast.",Ratio meets WCAG AA,Low
-TC_527,User Experience (UX),Verify responsive menu on tablet - Variation 527,"1. Resize to tablet width\nNote: Test specifically for responsive menu.",Menu collapses correctly,Medium
-TC_528,Password Management,Verify password expiration warning - Variation 528,"1. Near expiry date\nNote: Test specifically for warning.",Warning displayed,Low
-TC_529,Authentication System,Verify login with locked out IP - Variation 529,"1. Attempt login from blocked IP\nNote: Test specifically for IP block.",Login denied,High
-TC_530,Performance,Verify server response time under load - Variation 530,"1. Simulate 1000 concurrent users\nNote: Test specifically for load.",Response <200ms,Medium
-TC_531,Security & Compliance,Verify session fixation protection - Variation 531,"1. Reuse session ID after login\nNote: Test specifically for fixation.",New session ID assigned,High
-TC_532,Integration & Third-Party,Verify GitHub OAuth flow - Variation 532,"1. Click 'Login with GitHub'\n2. Authorize\nNote: Test specifically for OAuth.",User logged in via GitHub,Medium
-TC_533,Accessibility,Verify skip navigation link - Variation 533,"1. Activate skip link\nNote: Test specifically for skip link.",Focus moves to main content,Low
-TC_534,User Experience (UX),Verify toast notification content - Variation 534,"1. Trigger action\n2. Observe toast\nNote: Test specifically for toast.",Message matches action,Low
-TC_535,Password Management,Verify password reset email link expiration - Variation 535,"1. Request reset\n2. Wait 24h\nNote: Test specifically for expiration.",Link expired,Medium
-TC_536,Authentication System,Verify login with case-insensitive email - Variation 536,"1. Enter email in upper case\nNote: Test specifically for case insensitivity.",Login succeeds,Low
-TC_537,Performance,Verify video streaming buffering - Variation 537,"1. Play video\nNote: Test specifically for buffering.",Smooth playback,Medium
-TC_538,Security & Compliance,Verify security headers presence - Variation 538,"1. Request page\n2. Inspect headers\nNote: Test specifically for headers.",Headers include CSP,High
-TC_539,Integration & Third-Party,Verify webhook payload schema - Variation 539,"1. Trigger webhook\n2. Validate JSON schema\nNote: Test specifically for schema.",Payload matches schema,Medium
-TC_540,Accessibility,Verify form field labels association - Variation 540,"1. Inspect DOM\nNote: Test specifically for label association.",Labels correctly linked,Low
-TC_541,User Experience (UX),Verify dark mode persistence - Variation 541,"1. Enable dark mode\n2. Refresh page\nNote: Test specifically for persistence.",Theme remains dark,Low
-TC_542,Password Management,Verify password reset rate limit - Variation 542,"1. Request reset multiple times\nNote: Test specifically for rate limit.",Requests throttled,Medium
-TC_543,Authentication System,Verify login attempt logging - Variation 543,"1. Attempt login\n2. Check logs\nNote: Test specifically for logging.",Attempt recorded,Low
-TC_544,Performance,Verify API response compression - Variation 544,"1. Call API with Accept-Encoding gzip\nNote: Test specifically for compression.",Response compressed,Low
-TC_545,Security & Compliance,Verify account enumeration protection - Variation 545,"1. Attempt login with invalid email\nNote: Test specifically for enumeration.",Generic error message,Medium
-TC_546,Integration & Third-Party,Verify Zoom meeting creation API - Variation 546,"1. Create meeting via API\nNote: Test specifically for Zoom.",Meeting created,Low
-TC_547,Accessibility,Verify high contrast toggle functionality - Variation 547,"1. Enable high contrast\nNote: Test specifically for toggle.",UI switches correctly,Low
-TC_548,User Experience (UX),Verify breadcrumb navigation accuracy - Variation 548,"1. Navigate through pages\nNote: Test specifically for breadcrumbs.",Breadcrumbs reflect path,Low
-TC_549,Password Management,Verify password reuse restriction - Variation 549,"1. Reuse old password\nNote: Test specifically for reuse.",Change rejected,High
-TC_550,Authentication System,Verify email verification link expiry - Variation 550,"1. Receive verification email\n2. Click after 48h\nNote: Test specifically for expiry.",Link expired message,Medium
-TC_551,Performance,Verify database query performance - Variation 551,"1. Run complex query\nNote: Test specifically for query time.",Query completes <500ms,Low
-TC_552,Security & Compliance,Verify secure cookie flag - Variation 552,"1. Inspect Set-Cookie header\nNote: Test specifically for Secure flag.",Cookie includes Secure,High
-TC_553,Integration & Third-Party,Verify Salesforce data sync - Variation 553,"1. Create record\n2. Verify sync to Salesforce\nNote: Test specifically for sync.",Data synced successfully,Medium
-TC_554,Accessibility,Verify ARIA live region updates - Variation 554,"1. Trigger live region change\nNote: Test specifically for ARIA live.",Screen reader announces change,Low
-TC_555,User Experience (UX),Verify scroll restoration after navigation - Variation 555,"1. Scroll down\n2. Navigate away and back\nNote: Test specifically for restoration.",Scroll position retained,Low
-TC_556,Password Management,Verify password hint display - Variation 556,"1. Focus password field\nNote: Test specifically for hint.",Hint appears,Low
-TC_557,Authentication System,Verify login with unsupported browser - Variation 557,"1. Use legacy browser\nNote: Test specifically for unsupported browser.",Graceful degradation,Medium
-TC_558,Performance,Verify image format optimization - Variation 558,"1. Load page with WebP images\nNote: Test specifically for format.",Images serve as WebP,Low
-TC_559,Security & Compliance,Verify audit log integrity - Variation 559,"1. Generate actions\n2. Tamper log\nNote: Test specifically for integrity.",Tampering detected,High
-TC_560,Integration & Third-Party,Verify webhook signature verification - Variation 560,"1. Receive webhook\n2. Validate signature\nNote: Test specifically for signature.",Signature verified,Medium
-TC_561,Accessibility,Verify focus order on form submission error - Variation 561,"1. Submit invalid form\nNote: Test specifically for focus order.",Focus moves to first error,Low
-TC_562,User Experience (UX),Verify banner dismissal persistence - Variation 562,"1. Dismiss banner\n2. Refresh page\nNote: Test specifically for persistence.",Banner remains dismissed,Low
-TC_563,Password Management,Verify password reset link single-use - Variation 563,"1. Use reset link\n2. Attempt reuse\nNote: Test specifically for single-use.",Second use rejected,Medium
-TC_564,Authentication System,Verify login with expired token - Variation 564,"1. Use old JWT token\nNote: Test specifically for expiry.",Authentication denied,High
-TC_565,Performance,Verify server startup time - Variation 565,"1. Restart server\nNote: Test specifically for startup.",Startup <5s,Low
-TC_566,Security & Compliance,Verify data encryption at rest - Variation 566,"1. Inspect storage encryption\nNote: Test specifically for at-rest encryption.",Data encrypted,High
-TC_567,Integration & Third-Party,Verify webhook replay attack protection - Variation 567,"1. Replay webhook payload\nNote: Test specifically for replay.",Replay rejected,Medium
-TC_568,Accessibility,Verify tooltip accessibility labels - Variation 568,"1. Hover tooltip\nNote: Test specifically for ARIA label.",Label present,Low
-TC_569,User Experience (UX),Verify multi-step form navigation - Variation 569,"1. Complete step 1\n2. Proceed to step 2\nNote: Test specifically for wizard.",Navigation works,Low
-TC_570,Password Management,Verify password strength regex - Variation 570,"1. Enter password meeting regex\nNote: Test specifically for regex.",Password accepted,Low
-TC_571,Authentication System,Verify login with biometric factor - Variation 571,"1. Use fingerprint login\nNote: Test specifically for biometrics.",Login succeeds,Medium
-TC_572,Performance,Verify API rate limiting thresholds - Variation 572,"1. Send 100 requests\nNote: Test specifically for rate limit.",Limit enforced at 60 req/min,Medium
-TC_573,Security & Compliance,Verify CSP header effectiveness - Variation 573,"1. Attempt inline script\nNote: Test specifically for CSP.",Script blocked,High
-TC_574,Integration & Third-Party,Verify Zapier integration trigger - Variation 574,"1. Trigger Zapier webhook\nNote: Test specifically for Zapier.",Zap executed,Low
-TC_575,Accessibility,Verify form field autocomplete attributes - Variation 575,"1. Inspect autocomplete values\nNote: Test specifically for autocomplete.",Attributes set correctly,Low
-TC_576,User Experience (UX),Verify modal close on ESC key - Variation 576,"1. Open modal\n2. Press ESC\nNote: Test specifically for ESC.",Modal closes,Low
-TC_577,Password Management,Verify password reset email localization - Variation 577,"1. Request reset in Spanish\nNote: Test specifically for localization.",Email in Spanish,Medium
-TC_578,Authentication System,Verify login with throttled IP after repeated failures - Variation 578,"1. Fail login 10 times\n2. Attempt again\nNote: Test specifically for IP throttle.",IP blocked,High
-TC_579,Performance,Verify CDN failover handling - Variation 579,"1. Simulate CDN outage\nNote: Test specifically for failover.",Content served from fallback,Medium
-TC_580,Security & Compliance,Verify password reset token encryption - Variation 580,"1. Inspect token payload\nNote: Test specifically for encryption.",Token encrypted,High
-TC_581,Integration & Third-Party,Verify Microsoft Teams notification - Variation 581,"1. Trigger event\n2. Check Teams channel\nNote: Test specifically for Teams.",Notification posted,Low
-TC_582,Accessibility,Verify language attribute on html tag - Variation 582,"1. Inspect <html> tag\nNote: Test specifically for lang attribute.",Lang attribute present,Low
-TC_583,User Experience (UX),Verify carousel auto-rotate interval - Variation 583,"1. Observe carousel\nNote: Test specifically for auto-rotate.",Interval matches spec,Low
-TC_584,Password Management,Verify password reset link HTTPS usage - Variation 584,"1. Click reset link\nNote: Test specifically for HTTPS.",Link uses HTTPS,Low
-TC_585,Authentication System,Verify account recovery via security questions - Variation 585,"1. Answer security questions\nNote: Test specifically for recovery.",Account recovered,Medium
-TC_586,Performance,Verify large dataset pagination performance - Variation 586,"1. Load page with 10k items\n2. Paginate\nNote: Test specifically for pagination.",Pagination <300ms,Medium
-TC_587,Security & Compliance,Verify login attempt IP logging - Variation 587,"1. Attempt login\n2. Check logs for IP\nNote: Test specifically for IP logging.",IP recorded,Low
-TC_588,Integration & Third-Party,Verify Discord webhook message formatting - Variation 588,"1. Send webhook\n2. Check Discord message\nNote: Test specifically for formatting.",Message formatted correctly,Low
-TC_589,Accessibility,Verify button role attribute - Variation 589,"1. Inspect button element\nNote: Test specifically for role.",Role set to button,Low
-TC_590,User Experience (UX),Verify scroll-to-top button visibility - Variation 590,"1. Scroll down\n2. Observe button\nNote: Test specifically for visibility.",Button appears,Low
-TC_591,Password Management,Verify password policy UI feedback - Variation 591,"1. Type password\nNote: Test specifically for UI feedback.",Feedback updates live,Low
-TC_592,Authentication System,Verify login after email change - Variation 592,"1. Change email\n2. Login with new email\nNote: Test specifically for email change.",Login succeeds,Medium
-TC_593,Performance,Verify WebSocket message latency - Variation 593,"1. Send WebSocket message\nNote: Test specifically for latency.",Latency <50ms,Low
-TC_594,Security & Compliance,Verify MFA backup code generation - Variation 594,"1. Generate backup codes\nNote: Test specifically for backup.",Codes generated,Medium
-TC_595,Integration & Third-Party,Verify Salesforce OAuth token refresh - Variation 595,"1. Expire token\n2. Refresh token\nNote: Test specifically for refresh.",Token refreshed,Medium
-TC_596,Accessibility,Verify skip to content link visibility on focus - Variation 596,"1. Tab to skip link\nNote: Test specifically for focus visibility.",Link becomes visible,Low
-TC_597,User Experience (UX),Verify swipe gestures on mobile carousel - Variation 597,"1. Swipe carousel on mobile\nNote: Test specifically for gestures.",Carousel moves,Low
-TC_598,Password Management,Verify password reset request rate limit - Variation 598,"1. Request reset multiple times\nNote: Test specifically for rate limit.",Requests throttled,Medium
-TC_599,Authentication System,Verify login with expired session cookie - Variation 599,"1. Use expired cookie\nNote: Test specifically for expiration.",Session invalidated,High
-TC_600,Performance,Verify API throttling under burst traffic - Variation 600,"1. Send burst of requests\nNote: Test specifically for burst throttling.",Burst limited correctly,Medium
+TC_501,Authentication System,Verify login with OTP - Variation 501,1. Enter username\n2. Enter OTP\nNote: Test specifically for OTP condition.,User successfully logs in with OTP,Low
+TC_502,Performance,Verify page load speed on 4G - Variation 502,1. Throttle connection to 4G\n2. Load page\nNote: Test specifically for 4G condition.,Core assets load efficiently,Medium
+TC_503,Security & Compliance,Verify CSRF protection - Variation 503,1. Submit form without CSRF token\nNote: Test specifically for CSRF condition.,Request is rejected,High
+TC_504,Integration & Third-Party,Verify Slack webhook integration - Variation 504,1. Trigger event\n2. Check Slack channel\nNote: Test specifically for webhook condition.,Message posted to Slack,Low
+TC_505,Accessibility,Verify screen reader reading order - Variation 505,1. Navigate page with screen reader\nNote: Test specifically for reading order.,Elements announced in correct order,Low
+TC_506,User Experience (UX),Verify tooltip display on hover - Variation 506,1. Hover over element\nNote: Test specifically for tooltip condition.,Tooltip appears correctly,Medium
+TC_507,Password Management,Verify password reset email content - Variation 507,1. Request password reset\nNote: Test specifically for email content.,Email contains reset link,Low
+TC_508,Authentication System,Verify login with social account - Variation 508,1. Click 'Login with Google'\n2. Authenticate\nNote: Test specifically for social login.,User logged in via Google,Medium
+TC_509,Performance,Verify asset caching headers - Variation 509,1. Load page\n2. Inspect response headers\nNote: Test specifically for caching.,Headers include proper cache-control,Low
+TC_510,Security & Compliance,Verify password hash storage - Variation 510,1. Create new user\nNote: Test specifically for hash storage.,Passwords stored as hashes,High
+TC_511,Integration & Third-Party,Verify Stripe payment flow - Variation 511,1. Initiate payment\n2. Complete checkout\nNote: Test specifically for payment.,Payment succeeds,Medium
+TC_512,Accessibility,Verify focus trap in modal - Variation 512,1. Open modal\n2. Tab through elements\nNote: Test specifically for focus trap.,Focus stays within modal,Low
+TC_513,User Experience (UX),Verify infinite scroll loading - Variation 513,1. Scroll to bottom\nNote: Test specifically for infinite scroll.,New items load correctly,Medium
+TC_514,Password Management,Verify password strength meter colors - Variation 514,1. Enter weak password\n2. Observe meter\nNote: Test specifically for color change.,Meter shows red for weak,Low
+TC_515,Authentication System,Verify login after account lock - Variation 515,1. Lock account\n2. Attempt login\nNote: Test specifically for locked account.,Login denied with lock message,High
+TC_516,Performance,Verify image lazy loading - Variation 516,1. Load page with images below fold\nNote: Test specifically for lazy load.,Images load on scroll,Low
+TC_517,Security & Compliance,Verify XSS in comment field - Variation 517,1. Submit <script>alert(1)</script> in comment\nNote: Test specifically for XSS.,Input sanitized,Low
+TC_518,Integration & Third-Party,Verify webhook retry logic - Variation 518,1. Simulate webhook failure\nNote: Test specifically for retry.,Webhook retries up to 3 times,Medium
+TC_519,Accessibility,Verify keyboard shortcuts - Variation 519,1. Press Alt+S\nNote: Test specifically for shortcut.,Shortcut triggers correct action,Low
+TC_520,User Experience (UX),Verify loading spinner disappears - Variation 520,1. Submit form\nNote: Test specifically for spinner.,Spinner disappears after load,Low
+TC_521,Password Management,Verify password history enforcement - Variation 521,1. Change password to previous one\nNote: Test specifically for history.,Change rejected,High
+TC_522,Authentication System,Verify account deletion flow - Variation 522,1. Delete account\nNote: Test specifically for deletion.,Account removed permanently,Medium
+TC_523,Performance,Verify CDN cache busting - Variation 523,1. Deploy new asset\n2. Load page\nNote: Test specifically for cache busting.,New asset served,Low
+TC_524,Security & Compliance,Verify two-factor authentication backup codes - Variation 524,1. Use backup code for 2FA\nNote: Test specifically for backup.,Login succeeds,Medium
+TC_525,Integration & Third-Party,Verify Google Analytics event firing - Variation 525,1. Perform action\n2. Check GA console\nNote: Test specifically for analytics.,Event recorded,Low
+TC_526,Accessibility,Verify contrast ratio for text - Variation 526,1. Inspect CSS colors\nNote: Test specifically for contrast.,Ratio meets WCAG AA,Low
+TC_527,User Experience (UX),Verify responsive menu on tablet - Variation 527,1. Resize to tablet width\nNote: Test specifically for responsive menu.,Menu collapses correctly,Medium
+TC_528,Password Management,Verify password expiration warning - Variation 528,1. Near expiry date\nNote: Test specifically for warning.,Warning displayed,Low
+TC_529,Authentication System,Verify login with locked out IP - Variation 529,1. Attempt login from blocked IP\nNote: Test specifically for IP block.,Login denied,High
+TC_530,Performance,Verify server response time under load - Variation 530,1. Simulate 1000 concurrent users\nNote: Test specifically for load.,Response <200ms,Medium
+TC_531,Security & Compliance,Verify session fixation protection - Variation 531,1. Reuse session ID after login\nNote: Test specifically for fixation.,New session ID assigned,High
+TC_532,Integration & Third-Party,Verify GitHub OAuth flow - Variation 532,1. Click 'Login with GitHub'\n2. Authorize\nNote: Test specifically for OAuth.,User logged in via GitHub,Medium
+TC_533,Accessibility,Verify skip navigation link - Variation 533,1. Activate skip link\nNote: Test specifically for skip link.,Focus moves to main content,Low
+TC_534,User Experience (UX),Verify toast notification content - Variation 534,1. Trigger action\n2. Observe toast\nNote: Test specifically for toast.,Message matches action,Low
+TC_535,Password Management,Verify password reset email link expiration - Variation 535,1. Request reset\n2. Wait 24h\nNote: Test specifically for expiration.,Link expired,Medium
+TC_536,Authentication System,Verify login with case-insensitive email - Variation 536,1. Enter email in upper case\nNote: Test specifically for case insensitivity.,Login succeeds,Low
+TC_537,Performance,Verify video streaming buffering - Variation 537,1. Play video\nNote: Test specifically for buffering.,Smooth playback,Medium
+TC_538,Security & Compliance,Verify security headers presence - Variation 538,1. Request page\n2. Inspect headers\nNote: Test specifically for headers.,Headers include CSP,High
+TC_539,Integration & Third-Party,Verify webhook payload schema - Variation 539,1. Trigger webhook\n2. Validate JSON schema\nNote: Test specifically for schema.,Payload matches schema,Medium
+TC_540,Accessibility,Verify form field labels association - Variation 540,1. Inspect DOM\nNote: Test specifically for label association.,Labels correctly linked,Low
+TC_541,User Experience (UX),Verify dark mode persistence - Variation 541,1. Enable dark mode\n2. Refresh page\nNote: Test specifically for persistence.,Theme remains dark,Low
+TC_542,Password Management,Verify password reset rate limit - Variation 542,1. Request reset multiple times\nNote: Test specifically for rate limit.,Requests throttled,Medium
+TC_543,Authentication System,Verify login attempt logging - Variation 543,1. Attempt login\n2. Check logs\nNote: Test specifically for logging.,Attempt recorded,Low
+TC_544,Performance,Verify API response compression - Variation 544,1. Call API with Accept-Encoding gzip\nNote: Test specifically for compression.,Response compressed,Low
+TC_545,Security & Compliance,Verify account enumeration protection - Variation 545,1. Attempt login with invalid email\nNote: Test specifically for enumeration.,Generic error message,Medium
+TC_546,Integration & Third-Party,Verify Zoom meeting creation API - Variation 546,1. Create meeting via API\nNote: Test specifically for Zoom.,Meeting created,Low
+TC_547,Accessibility,Verify high contrast toggle functionality - Variation 547,1. Enable high contrast\nNote: Test specifically for toggle.,UI switches correctly,Low
+TC_548,User Experience (UX),Verify breadcrumb navigation accuracy - Variation 548,1. Navigate through pages\nNote: Test specifically for breadcrumbs.,Breadcrumbs reflect path,Low
+TC_549,Password Management,Verify password reuse restriction - Variation 549,1. Reuse old password\nNote: Test specifically for reuse.,Change rejected,High
+TC_550,Authentication System,Verify email verification link expiry - Variation 550,1. Receive verification email\n2. Click after 48h\nNote: Test specifically for expiry.,Link expired message,Medium
+TC_551,Performance,Verify database query performance - Variation 551,1. Run complex query\nNote: Test specifically for query time.,Query completes <500ms,Low
+TC_552,Security & Compliance,Verify secure cookie flag - Variation 552,1. Inspect Set-Cookie header\nNote: Test specifically for Secure flag.,Cookie includes Secure,High
+TC_553,Integration & Third-Party,Verify Salesforce data sync - Variation 553,1. Create record\n2. Verify sync to Salesforce\nNote: Test specifically for sync.,Data synced successfully,Medium
+TC_554,Accessibility,Verify ARIA live region updates - Variation 554,1. Trigger live region change\nNote: Test specifically for ARIA live.,Screen reader announces change,Low
+TC_555,User Experience (UX),Verify scroll restoration after navigation - Variation 555,1. Scroll down\n2. Navigate away and back\nNote: Test specifically for restoration.,Scroll position retained,Low
+TC_556,Password Management,Verify password hint display - Variation 556,1. Focus password field\nNote: Test specifically for hint.,Hint appears,Low
+TC_557,Authentication System,Verify login with unsupported browser - Variation 557,1. Use legacy browser\nNote: Test specifically for unsupported browser.,Graceful degradation,Medium
+TC_558,Performance,Verify image format optimization - Variation 558,1. Load page with WebP images\nNote: Test specifically for format.,Images serve as WebP,Low
+TC_559,Security & Compliance,Verify audit log integrity - Variation 559,1. Generate actions\n2. Tamper log\nNote: Test specifically for integrity.,Tampering detected,High
+TC_560,Integration & Third-Party,Verify webhook signature verification - Variation 560,1. Receive webhook\n2. Validate signature\nNote: Test specifically for signature.,Signature verified,Medium
+TC_561,Accessibility,Verify focus order on form submission error - Variation 561,1. Submit invalid form\nNote: Test specifically for focus order.,Focus moves to first error,Low
+TC_562,User Experience (UX),Verify banner dismissal persistence - Variation 562,1. Dismiss banner\n2. Refresh page\nNote: Test specifically for persistence.,Banner remains dismissed,Low
+TC_563,Password Management,Verify password reset link single-use - Variation 563,1. Use reset link\n2. Attempt reuse\nNote: Test specifically for single-use.,Second use rejected,Medium
+TC_564,Authentication System,Verify login with expired token - Variation 564,1. Use old JWT token\nNote: Test specifically for expiry.,Authentication denied,High
+TC_565,Performance,Verify server startup time - Variation 565,1. Restart server\nNote: Test specifically for startup.,Startup <5s,Low
+TC_566,Security & Compliance,Verify data encryption at rest - Variation 566,1. Inspect storage encryption\nNote: Test specifically for at-rest encryption.,Data encrypted,High
+TC_567,Integration & Third-Party,Verify webhook replay attack protection - Variation 567,1. Replay webhook payload\nNote: Test specifically for replay.,Replay rejected,Medium
+TC_568,Accessibility,Verify tooltip accessibility labels - Variation 568,1. Hover tooltip\nNote: Test specifically for ARIA label.,Label present,Low
+TC_569,User Experience (UX),Verify multi-step form navigation - Variation 569,1. Complete step 1\n2. Proceed to step 2\nNote: Test specifically for wizard.,Navigation works,Low
+TC_570,Password Management,Verify password strength regex - Variation 570,1. Enter password meeting regex\nNote: Test specifically for regex.,Password accepted,Low
+TC_571,Authentication System,Verify login with biometric factor - Variation 571,1. Use fingerprint login\nNote: Test specifically for biometrics.,Login succeeds,Medium
+TC_572,Performance,Verify API rate limiting thresholds - Variation 572,1. Send 100 requests\nNote: Test specifically for rate limit.,Limit enforced at 60 req/min,Medium
+TC_573,Security & Compliance,Verify CSP header effectiveness - Variation 573,1. Attempt inline script\nNote: Test specifically for CSP.,Script blocked,High
+TC_574,Integration & Third-Party,Verify Zapier integration trigger - Variation 574,1. Trigger Zapier webhook\nNote: Test specifically for Zapier.,Zap executed,Low
+TC_575,Accessibility,Verify form field autocomplete attributes - Variation 575,1. Inspect autocomplete values\nNote: Test specifically for autocomplete.,Attributes set correctly,Low
+TC_576,User Experience (UX),Verify modal close on ESC key - Variation 576,1. Open modal\n2. Press ESC\nNote: Test specifically for ESC.,Modal closes,Low
+TC_577,Password Management,Verify password reset email localization - Variation 577,1. Request reset in Spanish\nNote: Test specifically for localization.,Email in Spanish,Medium
+TC_578,Authentication System,Verify login with throttled IP after repeated failures - Variation 578,1. Fail login 10 times\n2. Attempt again\nNote: Test specifically for IP throttle.,IP blocked,High
+TC_579,Performance,Verify CDN failover handling - Variation 579,1. Simulate CDN outage\nNote: Test specifically for failover.,Content served from fallback,Medium
+TC_580,Security & Compliance,Verify password reset token encryption - Variation 580,1. Inspect token payload\nNote: Test specifically for encryption.,Token encrypted,High
+TC_581,Integration & Third-Party,Verify Microsoft Teams notification - Variation 581,1. Trigger event\n2. Check Teams channel\nNote: Test specifically for Teams.,Notification posted,Low
+TC_582,Accessibility,Verify language attribute on html tag - Variation 582,1. Inspect <html> tag\nNote: Test specifically for lang attribute.,Lang attribute present,Low
+TC_583,User Experience (UX),Verify carousel auto-rotate interval - Variation 583,1. Observe carousel\nNote: Test specifically for auto-rotate.,Interval matches spec,Low
+TC_584,Password Management,Verify password reset link HTTPS usage - Variation 584,1. Click reset link\nNote: Test specifically for HTTPS.,Link uses HTTPS,Low
+TC_585,Authentication System,Verify account recovery via security questions - Variation 585,1. Answer security questions\nNote: Test specifically for recovery.,Account recovered,Medium
+TC_586,Performance,Verify large dataset pagination performance - Variation 586,1. Load page with 10k items\n2. Paginate\nNote: Test specifically for pagination.,Pagination <300ms,Medium
+TC_587,Security & Compliance,Verify login attempt IP logging - Variation 587,1. Attempt login\n2. Check logs for IP\nNote: Test specifically for IP logging.,IP recorded,Low
+TC_588,Integration & Third-Party,Verify Discord webhook message formatting - Variation 588,1. Send webhook\n2. Check Discord message\nNote: Test specifically for formatting.,Message formatted correctly,Low
+TC_589,Accessibility,Verify button role attribute - Variation 589,1. Inspect button element\nNote: Test specifically for role.,Role set to button,Low
+TC_590,User Experience (UX),Verify scroll-to-top button visibility - Variation 590,1. Scroll down\n2. Observe button\nNote: Test specifically for visibility.,Button appears,Low
+TC_591,Password Management,Verify password policy UI feedback - Variation 591,1. Type password\nNote: Test specifically for UI feedback.,Feedback updates live,Low
+TC_592,Authentication System,Verify login after email change - Variation 592,1. Change email\n2. Login with new email\nNote: Test specifically for email change.,Login succeeds,Medium
+TC_593,Performance,Verify WebSocket message latency - Variation 593,1. Send WebSocket message\nNote: Test specifically for latency.,Latency <50ms,Low
+TC_594,Security & Compliance,Verify MFA backup code generation - Variation 594,1. Generate backup codes\nNote: Test specifically for backup.,Codes generated,Medium
+TC_595,Integration & Third-Party,Verify Salesforce OAuth token refresh - Variation 595,1. Expire token\n2. Refresh token\nNote: Test specifically for refresh.,Token refreshed,Medium
+TC_596,Accessibility,Verify skip to content link visibility on focus - Variation 596,1. Tab to skip link\nNote: Test specifically for focus visibility.,Link becomes visible,Low
+TC_597,User Experience (UX),Verify swipe gestures on mobile carousel - Variation 597,1. Swipe carousel on mobile\nNote: Test specifically for gestures.,Carousel moves,Low
+TC_598,Password Management,Verify password reset request rate limit - Variation 598,1. Request reset multiple times\nNote: Test specifically for rate limit.,Requests throttled,Medium
+TC_599,Authentication System,Verify login with expired session cookie - Variation 599,1. Use expired cookie\nNote: Test specifically for expiration.,Session invalidated,High
+TC_600,Performance,Verify API throttling under burst traffic - Variation 600,1. Send burst of requests\nNote: Test specifically for burst throttling.,Burst limited correctly,Medium

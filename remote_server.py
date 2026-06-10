@@ -67,6 +67,18 @@ def search_by_module(module: str) -> str:
     results = [tc for tc in TEST_CASES if module.lower() in tc.get('Module', '').lower()]
     return json.dumps(results, indent=2)
 
+@mcp.tool()
+def get_test_cases_by_range(
+    start_index: int = Field(0, description="start index"),
+    end_index: int = Field(50, description="end index")
+) -> str:
+    """Get test cases by index range. Example: start_index=500, end_index=550."""
+    load_test_cases()
+    if start_index < 0 or end_index > len(TEST_CASES) or start_index >= end_index:
+        return json.dumps({"error": f"Invalid range. Total test cases: {len(TEST_CASES)}"}, indent=2)
+    results = TEST_CASES[start_index:end_index]
+    return json.dumps({"total_in_range": len(results), "test_cases": results}, indent=2)
+
 
 from starlette.middleware.cors import CORSMiddleware
 
